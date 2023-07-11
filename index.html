@@ -1,8 +1,53 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <title>My Task Manager</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-<p>I'm hosted with GitHub Pages.</p>
+  <header>
+    <h1>My Task Manager</h1>
+  </header>
+  
+  <main>
+    <section id="tasks">
+      <h2>Tasks</h2>
+      <ul id="task-list">
+        <!-- Aquí se mostrarán las tareas -->
+      </ul>
+      <form id="task-form">
+        <input type="text" id="task-input" placeholder="Enter a task...">
+        <button type="submit">Add Task</button>
+      </form>
+    </section>
+    
+    <section id="notes">
+      <h2>Notes</h2>
+      <ul id="note-list">
+        <!-- Aquí se mostrarán las notas -->
+      </ul>
+      <form id="note-form">
+        <textarea id="note-input" placeholder="Enter a note..."></textarea>
+        <button type="submit">Add Note</button>
+      </form>
+    </section>
+    
+    <section id="reminders">
+      <h2>Reminders</h2>
+      <ul id="reminder-list">
+        <!-- Aquí se mostrarán los recordatorios -->
+      </ul>
+      <form id="reminder-form">
+        <input type="datetime-local" id="reminder-input" placeholder="Select a reminder date and time...">
+        <button type="submit">Add Reminder</button>
+      </form>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2023 My Task Manager. All rights reserved.</p>
+  </footer>
+  
+  <script src="app.js"></script>
 </body>
 </html>
