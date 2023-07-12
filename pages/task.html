@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Task Manager</title>
+  <link rel="stylesheet" type="text/css" href="../styles/task.css">
+  <script src="../scrips/text.js">
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Simple Task Manager</h1>
+  </header>
+
+  <main>
+    <h2>Agregar tarea</h2>
+    <form id="task-form">
+      <label for="task-title">Nombre:</label>
+      <input type="text" id="task-title" placeholder="Enter task title">
+
+      <label for="task-description" class="cajadetexto">Descripción:</label>
+      <textarea id="task-description" placeholder="Enter task description"></textarea>
+      
+      <label for="task-start-date">Fecha de inicio:</label>
+      <input type="date" id="task-start-date">
+
+
+      <label for="task-due-date">Fecha de terminación:</label>
+      <input type="date" id="task-due-date">
+
+      <button type="submit" class="boton">Agregar tarea</button>
+    </form>
+
+    <h2>Task List</h2>
+    <ul id="task-list">
+      <!-- Aquí se mostrarán las tareas -->
+    </ul>
+  </main>
+
+  <footer>
+    <p>&copy; Brayan Jesús Carrillo Jiménez 2023.</p>
+  </footer>
+</body>
+</html>
