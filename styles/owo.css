@@ -1,117 +1,124 @@
-/* Estilos generales */
-*{
-  font-family: font;
-  src: url('img/fonts/Open_Sans.zip') format('truetype'); /* Ruta a tu archivo de fuente */
-
-}
-
-
+/* Estilos globales */
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Establece un mínimo de altura de la ventana gráfica (viewport height) */
+  background-color: #111;
+  color: #fff;
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #121212; /* Fondo oscuro */
-  color: #e0e0e0; /* Texto claro */
-}
-
-header, main, footer {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* Estilos para el encabezado */
-header {
-  background-color: #333; /* Fondo del encabezado más oscuro */
-  color: #fff;
   text-align: center;
 }
 
-h1 {
-  margin: 0;
-  font-size: 2.5em;
-  color: #ccc; /* Color de título distintivo */
-}
-
-h2 {
-  margin-top: 5px;
-  font-size: 1.5em;
-  color: #ccc; /* Color de subtítulo distintivo */
-}
-
-/* Estilos para las secciones */
-section {
-  background-color: #1e1e1e; /* Fondo de sección más oscuro */
-  border: 1px solid #444; /* Borde ligeramente más claro */
-  border-radius: 5px;
-  margin-bottom: 20px;
+/* Encabezado */
+header {
+  background-color: #333;
+  color: #fff;
   padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+h1.nombre {
+  font-size: 36px;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+h2.titulo {
+  font-size: 24px;
+  margin: 5px 0 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos de títulos */
+h3 {
+  font-size: 28px; /* Aumenta el tamaño de fuente */
+  color: #fff; /* Cambia el color a azul brillante */
+  font-weight: bold; /* Aplica negrita */
+  text-decoration: underline; /* Agrega subrayado */
+  padding: 5px; /* Agrega un espacio alrededor del texto para resaltarlo */
+  background-color: #444; /* Fondo de resaltado */
+  border-radius: 5px; /* Esquinas redondeadas para el fondo */
+}
+/* Secciones */
+section {
+  background-color: rgba(51, 51, 51, 0.9);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin: 20px auto;
+  border-radius: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
 }
 
 h3 {
-  font-size: 1.2em;
-  margin-top: 0;
-  color: #e0e0e0;
+  font-size: 24px;
+  margin: 0 0 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilos para el pie de página */
-footer {
-  text-align: center;
-  background-color: #333;
-  color: #fff;
-  padding: 10px 0;
-}
-
-/* Estilos para listas */
 ul {
-  padding-left: 20px;
+  list-style: none;
+  padding: 0;
 }
 
 li {
-  margin-bottom: 5px;
-  color: #e0e0e0;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilos para enlaces */
-a {
-  color: #bb86fc; /* Color de enlace distintivo */
+a.enlace-educacion {
+  color: #00f;
   text-decoration: none;
 }
 
-a:hover {
+a.enlace-educacion:hover {
   text-decoration: underline;
 }
 
-#logo {
-  width: 200px;
+/* Habilidades */
+ul.habilidades {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
 }
 
-.texto {
-  text-align: justify;
+ul.habilidades li {
+  flex: 1;
+  margin: 0 5px;
+  background-color: #333;
+  padding: 10px;
+  text-align: center;
+  border-radius: 15px;
+  transition: background-color 0.3s;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-/* Ventana Emergente */
-.custom-tooltip {
-  position: relative;
-  /* Estilos del enlace */
+ul.habilidades li:hover {
+  background-color: #00f;
+  text-shadow: none;
 }
 
-.custom-tooltip::before {
-  content: attr(data-tooltip);
-  position: absolute;
-  top: -30px;
-  left: 50%;
-  transform: translateX(-50%);
+/* Pie de página */
+footer {
   background-color: #333;
   color: #fff;
-  padding: 5px;
-  border-radius: 5px;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s, visibility 0.3s;
+  padding: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  margin-top: auto; /* Hace que el footer siempre esté en la parte inferior */
 }
 
-.custom-tooltip:hover::before {
-  opacity: 1;
-  visibility: visible;
+/* Estilos de enlaces con referencia */
+a.enlace-educacion {
+  color: #888; /* Cambia el color a gris (#888) */
+  text-decoration: none; /* Quita la subrayado predeterminado */
+  font-style: italic; /* Aplica estilo de fuente en cursiva */
+  transition: color 0.3s; /* Agrega una animación de transición al color */
+}
+
+a.enlace-educacion:hover {
+  color: #555; /* Cambia el color al pasar el cursor (#555) */
+  text-decoration: underline; /* Agrega subrayado al pasar el cursor */
 }
