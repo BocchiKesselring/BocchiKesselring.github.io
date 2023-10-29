@@ -286,3 +286,31 @@ nav a:hover::after {
   transform: scaleX(1); /* Al pasar el cursor, la línea inferior se expande */
   transform-origin: left; /* La expansión comienza desde la izquierda */
 }
+
+/* Estilo para el contenedor izquierdo */
+.header-left {
+  display: flex;
+  align-items: center;
+  margin-right: 20px; /* Espacio entre el botón y el título */
+}
+
+/* Estilo para el botón "Regresar a la página principal" */
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Alinea elementos de izquierda a derecha */
+}
+
+/* Estilo para el botón "Regresar a la página principal" */
+.boton-regresar {
+  text-decoration: none;
+  color: rgb(240, 240, 240);
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s;
+  margin-right: 20px; /* Espacio entre el botón y el título */
+}
+
+.boton-regresar:hover {
+  color: #e20e0e;
+}
