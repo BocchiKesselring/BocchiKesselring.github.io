@@ -231,3 +231,21 @@ a.instagram:hover {
   color: #e22447;
 }
 
+/* Estilo del botón */
+button.ver-mas {
+  background: #00f;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* Estilo del pop-up */
+.popup {
+  display: none;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  position: absolute;
+  z-index: 1;
+}
