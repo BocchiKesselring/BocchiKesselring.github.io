@@ -30,7 +30,7 @@ body {
 
 /* Encabezado */
 header {
-  background: linear-gradient(to bottom, rgba(51, 51, 51, 0.8), rgba(102, 102, 102, 0.7)); /* Fondo translúcido con gradiente */
+  background: linear-gradient(to top, rgba(51, 51, 51, 0.8), rgba(102, 102, 102, 0.7)); /* Fondo translúcido con gradiente */
   color: #fff;
   padding: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -63,9 +63,9 @@ h3 {
 section {
   background-color: rgba(51, 51, 51, 0.9);
   color: #fff;
-  padding: 20px;
+  padding: 5px;
   text-align: center;
-  margin: 20px auto;
+  margin: 30px auto;
   border-radius: 15px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   max-width: 600px;
@@ -96,28 +96,6 @@ a.enlace-educacion:hover {
   text-decoration: underline;
 }
 
-/* Habilidades */
-ul.habilidades {
-  display: flex;
-  justify-content: space-between;
-  padding: 0;
-}
-
-ul.habilidades li {
-  flex: 1;
-  margin: 0 5px;
-  background-color: #333;
-  padding: 10px;
-  text-align: center;
-  border-radius: 15px;
-  transition: background-color 0.3s;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-}
-
-ul.habilidades li:hover {
-  background-color: #00f;
-  text-shadow: none;
-}
 
 /* Pie de página */
 footer {
@@ -144,8 +122,8 @@ a.enlace-educacion:hover {
 /* Estilos para el aside */
 aside {
   position: fixed;
-  top: 30%; /* Ajusta la posición vertical */
-  right: 20px; /* Ajusta la posición horizontal */
+  top: 50%; /* Ajusta la posición vertical */
+  right: 10px; /* Ajusta la posición horizontal */
   transform: translateY(-50%); /* Centra verticalmente */
   color: #fff;
 }
@@ -248,4 +226,63 @@ button.ver-mas {
   padding: 20px;
   position: absolute;
   z-index: 1;
+}
+
+/* Estilos globales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center; /* Centra el contenido del encabezado */
+}
+
+/*estilo del nav */
+nav ul {
+  list-style: none;
+  z-index: 2;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Centra horizontalmente los elementos del nav */
+  align-items: center; /* Centra verticalmente los elementos del nav */
+}
+
+nav li {
+  margin: 0 20px; /* Espacio entre los elementos del nav */
+  width: 150px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: all 0.3s; /* Agrega una transición suave para todos los atributos */
+  position: relative; /* Necesario para pseudo-elemento ::after */
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px; /* Grosor de la línea inferior */
+  bottom: 0;
+  left: 0;
+  background: rgb(194, 19, 72); /* Color de la línea inferior */
+  transform: scaleX(0); /* Inicialmente, la línea tiene un ancho de 0 */
+  transform-origin: right; /* La transformación comienza desde la derecha */
+  transition: transform 0.3s ease-in-out; /* Aplica una transición suave solo a la transformación */
+}
+
+nav a:hover {
+  color: rgb(194, 19, 72); /* Cambia el color al pasar el cursor */
+}
+
+nav a:hover::after {
+  transform: scaleX(1); /* Al pasar el cursor, la línea inferior se expande */
+  transform-origin: left; /* La expansión comienza desde la izquierda */
 }
