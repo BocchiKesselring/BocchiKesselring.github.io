@@ -3,7 +3,9 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh; /* Establece un mínimo de altura de la ventana gráfica (viewport height) */
-  background-color: #111;
+  background: linear-gradient(60deg,#222, #51005D, #222);
+  background-size: 400% 200%; /* Tamaño inicial del gradiente */
+  animation: gradientAnimation 20s ease-in-out infinite; /* Duración y repetición de la animación */
   color: #fff;
   font-family: 'Arial', sans-serif;
   margin: 0;
@@ -11,9 +13,24 @@ body {
   text-align: center;
 }
 
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0 50%; /* Inicio del gradiente */
+  }
+
+  50%{
+      background-position: 100% 50%; /* Inicio del gradiente */
+  }
+
+  10%{
+      background-position: 0 50%; /* Inicio del gradiente */
+  }
+}
+
+
 /* Encabezado */
 header {
-  background-color: #333;
+  background: linear-gradient(to bottom, rgba(51, 51, 51, 0.8), rgba(102, 102, 102, 0.7)); /* Fondo translúcido con gradiente */
   color: #fff;
   padding: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -41,6 +58,7 @@ h3 {
   background-color: #444; /* Fondo de resaltado */
   border-radius: 5px; /* Esquinas redondeadas para el fondo */
 }
+
 /* Secciones */
 section {
   background-color: rgba(51, 51, 51, 0.9);
@@ -103,7 +121,7 @@ ul.habilidades li:hover {
 
 /* Pie de página */
 footer {
-  background-color: #333;
+  background: linear-gradient(to top, rgba(51, 51, 51, 0.8), rgba(102, 102, 102, 0.7)); /* Fondo translúcido con gradiente */
   color: #fff;
   padding: 10px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
@@ -122,3 +140,94 @@ a.enlace-educacion:hover {
   color: #555; /* Cambia el color al pasar el cursor (#555) */
   text-decoration: underline; /* Agrega subrayado al pasar el cursor */
 }
+
+/* Estilos para el aside */
+aside {
+  position: fixed;
+  top: 30%; /* Ajusta la posición vertical */
+  right: 20px; /* Ajusta la posición horizontal */
+  transform: translateY(-50%); /* Centra verticalmente */
+  color: #fff;
+}
+
+/* Estilos para el título "Conéctate conmigo" */
+h4 {
+  font-size: 24px;
+  margin: 0 0 15px;
+}
+
+/* Estilos para la lista de redes sociales */
+ul.redes-sociales {
+  list-style: none;
+  padding: 0;
+}
+
+ul.redes-sociales li {
+  margin-bottom: 10px;
+}
+
+ul.redes-sociales img {
+  width: 20px; /* Ajusta el tamaño del ícono según tus necesidades */
+  height: 20px;
+  margin-right: 10px; /* Espacio entre el ícono y el texto */
+}
+
+/* Estilos para los enlaces de redes sociales */
+
+/* Estilos para el enlace de Facebook */
+a.facebook {
+  color: #1877f2; /* Color de Facebook */
+  text-decoration: underline;
+  transition: color 0.3s; font-size: large;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+}
+/* Cambio de color al pasar el cursor sobre el enlace de Facebook */
+a.facebook:hover {
+  color: #385898; /* Nuevo color al pasar el cursor sobre el enlace */
+}
+
+/* Estilos para el enlace de Twitter */
+a.twitter {
+  color: #1da1f2;
+  transition: color 0.3s; 
+  font-size: large;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+}
+
+a.twitter:hover{
+  color: #007ac5;
+}
+
+/* Estilos para el enlace de LinkedIn */
+a.linkedin {
+  color: #0e76a8;
+  transition: color 0.3s;
+  text-decoration: underline;
+  font-size: large;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+}
+
+a.linkedin:hover{
+  color: rgb(0, 93, 136);
+}
+
+/* Estilos para el enlace de Instagram */
+a.instagram {
+  color: #e4405f;
+  transition: color 0.3s;
+  text-decoration: underline;
+  font-size: large;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+}
+a.instagram:hover {
+  color: #e22447;
+}
+
