@@ -1,77 +1,113 @@
+/* Reset y Estilos Generales */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #222;
-    color: #444;
+    background-color: #005c99; /* Fondo oscuro */
+    color: #fff; /* Texto blanco */
+    overflow: hidden;
 }
 
+/* Encabezado */
 header {
     text-align: center;
     padding: 40px 0;
-    background-color: #333;
+    background-color: #333; /* Fondo más oscuro */
     color: #fff;
 }
 
-
-nav {
-    text-align: center;
-    background-color: #333;
-    padding: 10px 0;
+header h1 {
+    margin: 0;
 }
 
-ul {
+header p {
+    font-size: 18px;
+}
+
+/* Barra de Navegación */
+nav {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #222; /* Fondo más oscuro */
+}
+
+nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-li {
-    display: inline;
+nav li {
+    display: inline-block;
     margin: 0 15px;
 }
 
-a {
+nav a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
 }
-/*Pie de págimna*/
+
+nav a:hover {
+    color: #3498db; /* Color de enlace en hover */
+}
+
+/* Contenido Principal */
+main {
+    padding: 10px;
+    background-color: transparent;    
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+/* Imágenes de Sección */
+section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease;
+}
+
+section img:hover {
+    transform: scale(1.1);
+}
+
+/* Pie de Página */
 footer {
     text-align: center;
-    padding: 10px;
-    background-color:#fff;
-    color: #222;
+    padding: 20px;
+    background-color: #222; /* Fondo más oscuro */
+    color: #fff;
     position: fixed;
-    bottom: -95px; /* Valor negativo para ocultar el footer inicialmente */
+    bottom: -115px;
     width: 100%;
-    transition: bottom 0.7s ease-in-out; /* Agrega una transición para suavizar el efecto al mostrar/ocultar el footer */
+    transition: bottom 0.7s ease-in-out;
 }
 
 footer:hover {
-    bottom: 0; /* Muestra el footer cuando se pasa el ratón sobre él */
+    bottom: 0;
 }
 
-footer div {
+footer .social-icons {
     margin-bottom: 15px;
 }
 
 footer a {
-    color: #fff;
-    margin-right: 10px;
-    text-decoration: none;
-    font-size: 14px;
+    margin: 0 10px;
 }
 
-footer p {
-    font-size: 12px;
+footer img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.5s ease;
 }
 
-.img-footer a img{
-    display: inline-block; /* Asegura que las imágenes sean elementos de bloque para aplicar el transform */
-    transition: transform 0.6s ease; /* Añade una transición para suavizar el efecto al hacer hover */
-}
-
-.img-footer a:hover img {
-    transform: scale(1.2); /* Ajusta el valor según el factor de escala deseado al hacer hover */
+footer img:hover {
+    transform: scale(1.2);
 }
