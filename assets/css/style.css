@@ -15,7 +15,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom right, #3498db, #9b59b6);
+    background: linear-gradient(to bottom right, #520081, #000000);
     z-index: -1;
 }
 
@@ -36,12 +36,13 @@ body::before {
     height: 4px;
     border-radius: 50%;
     opacity: 0;
-    filter: brightness(200%);
+    filter: brightness(150%);
     box-shadow: 0 0 10px 5px #aa4cf7; /* Ajusta estos valores para la apariencia deseada */
 }
 
 header {
     text-align: center;
+    width: 100%;
     padding: 40px 0; /* Ajuste del padding para espacio alrededor del texto */
     background-color: #333; /* Fondo más oscuro */
     color: #fff;
@@ -215,18 +216,38 @@ section img:hover {
 
 /* Pie de Página */
 footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #222;    
-    color: #fff;
-    position: fixed;
+    position: absolute;
     bottom: -115px;
     width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: #fff;
+    overflow: hidden;
     transition: bottom 0.7s ease-in-out;
 }
 
+footer {
+    position: absorelute;
+    bottom: -115px;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: #fff;
+    overflow: hidden;
+    max-height: 105px; /* Establece la altura máxima que quieres mostrar inicialmente */
+    transition: max-height 0.7s ease-in-out;
+    z-index: 1;
+}
+
+#footer-handle img {
+    width: 120px;
+    height: 120px;
+}
+
 footer:hover {
-    bottom: 0;
+    max-height: 300px; /* Ajusta según la altura total del footer */
 }
 
 footer .social-icons {
@@ -240,10 +261,65 @@ footer a {
 footer img {
     width: 40px;
     height: 40px;
-    border-radius: 50%;
     transition: transform 0.5s ease;
 }
 
 footer img:hover {
     transform: scale(1.2);
+}
+
+.footer-items-container {
+    display: flex;
+    justify-content: space-around; /* Ajusta según tu preferencia */
+    align-items: center;
+}
+
+.footer-item {
+    text-align: center;
+    margin-right: 10px; /* Espacio entre las imágenes */
+}
+
+.footer-item img {
+    width: 120px;
+    height: 120px;
+}
+
+.footer-item p {
+    margin: 0;
+    font-weight: bold;
+
+}
+
+.social-icons {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.5s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+#particles-container-footer {
+    position: relative;
+    width: 100%;
+}
+
+.particle-footer {
+    position: absolute;
+    background-color: #edd3f8;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    filter: brightness(150%);
+    box-shadow: 0 0 10px 5px #aa4cf7; /* Ajusta estos valores para la apariencia deseada */
 }

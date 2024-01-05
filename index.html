@@ -24,7 +24,7 @@
     <nav>
         <ul>
             <li><a href="#home">Inicio</a></li>
-            <li><a href="#about">Sobre mí</a></li>
+            <li><a href="#resume">Curriculum</a></li>
             <li><a href="#portfolio">Portafolio</a></li>
             <li><a href="#contact">Contacto</a></li>
         </ul>
@@ -108,44 +108,97 @@
         </section>
     </main>    
     <footer>
+        <div id="particles-container-footer"></div>
+
+        <div id="footer-handle" class="footer-items-container">
+            <div class="footer-item">
+                <img src="images/footeranime2.png" alt="Anime 2">
+                <p>Alto ahí!</p>
+            </div>
+            <div class="footer-item">
+                <img src="images/footeranime.png" alt="Anime 1">
+                <p>Nunca te rindas!</p>
+            </div>
+            <div class="footer-item">
+                <img src="images/footeranime3.png" alt="Anime 3">
+                <p>Aunque el futuro sea incierto</p>
+            </div>
+            <div class="footer-item">
+                <img src="images/footeranime4.png" alt="Anime 4">
+                <p>De alguna manera debes salir adelante!</p>
+            </div>
+        </div>
         <div class="social-icons">
             <a href="https://github.com/BocchiKesselring" target="_blank"><img src="images/logos/githublogo.png" alt="GitHub"></a>
             <a href="https://www.linkedin.com/in/brayan-jes%C3%BAs-carrillo-jim%C3%A9nez-373918265/" target="_blank"><img src="images/logos/likedinlogo.png" alt="LinkedIn"></a>
             <a href="#" target="_blank"><img src="images/logos/iglogo.png" alt="Instagram"></a>
         </div>
-        <p>&copy; 2024 Brayan Carrillo Jiménez</p>
+        <p>&copy; 2024 | Brayan Jesús Carrillo Jiménez. | Todos los derechos reservados.</p>
     </footer>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const particlesContainer = document.getElementById('particles-container');
-
-            // Crea 100 partículas y las añade al contenedor
+    
+            // Crear partículas
             for (let i = 0; i < 100; i++) {
                 const particle = document.createElement('div');
                 particle.className = 'particle';
                 particle.style.left = `${Math.random() * 100}vw`;
                 particle.style.top = `${Math.random() * 100}vh`;
-
+    
                 particlesContainer.appendChild(particle);
             }
-
-            // Animación con anime.js para mover las partículas de abajo a arriba
+    
+            // Animar partículas
             anime({
                 targets: '.particle',
                 translateY: [
                     { value: '100vh', duration: 0 },
-                    { value: '-100vh', duration: 5000 }
+                    { value: '-100vh', duration: 6000 }
                 ],
                 opacity: [
                     { value: 0, duration: 0 },
                     { value: 1, duration: 2000 },
                     { value: 0, duration: 3000 }
                 ],
+                backgroundColor: function () {
+                    return anime.random(['#ff0000', '#00ff00', '#0000ff']);
+                },
                 easing: 'linear',
-                delay: anime.stagger(100), // Agrega un pequeño retraso a cada partícula
+                delay: anime.stagger(100),
                 loop: true
             });
         });
     </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const particlesContainer = document.getElementById('particles-container-footer');
+
+    for (let i = 0; i < 200; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle-footer';
+        particle.style.left = '0';
+        particle.style.top = `${Math.random() * 100}vh`;
+
+        particlesContainer.appendChild(particle);
+    }
+
+    anime({
+        targets: '.particle-footer',
+        translateX: [
+            { value: '100vw', duration: 20000 }
+        ],
+        translateY: () => anime.random(-50, 90) + 'vh',
+        opacity: [
+            { value: 0, duration: 0 },
+            { value: 1, duration: 2000 },
+            { value: 0, duration: 6000 }
+        ],
+        easeOutQuad: 'easeInOutExpo',
+        delay: anime.stagger(50),
+        loop: true
+    });
+});
+</script>
 </body>
 </html>
