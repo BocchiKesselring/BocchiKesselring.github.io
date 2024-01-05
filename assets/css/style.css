@@ -2,12 +2,44 @@
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
-    background-color: #4d4d4d;
     padding: 0;
     color: #fff; /* Color de texto para que sea legible sobre la imagen de fondo */
+    position: relative;
+    background-color: #222222;
 }
 
-/* Encabezado */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, #3498db, #9b59b6);
+    z-index: -1;
+}
+
+#particles-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.particle {
+    position: absolute;
+    background: #fff; /* Color de las partículas */
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    opacity: 0;
+    filter: brightness(200%);
+    box-shadow: 0 0 10px 5px #aa4cf7; /* Ajusta estos valores para la apariencia deseada */
+}
+
 header {
     text-align: center;
     padding: 40px 0; /* Ajuste del padding para espacio alrededor del texto */
@@ -58,7 +90,7 @@ main {
     padding: 10px;
 }
 #home{
-    background-color: #3498db;
+    background: transparent;
     max-width: 900px;
     margin-right: auto;
     border-radius: 10px;
@@ -75,7 +107,7 @@ main {
 
 #Skills {
     text-align: center;
-    background-color: #3498db;
+    background: transparent;
     margin-left: auto;
     padding: 15px;
     border-radius: 10px;
@@ -136,9 +168,9 @@ main {
 #estudios{
     text-align: center;
     border-radius: 10px;
-    background-color: #3498db;
+    background: transparent;
     padding: 15px;
-    max-width: 900px;
+    max-width: 100px;
     margin-right: auto;
     margin-bottom: 20cm;
 }

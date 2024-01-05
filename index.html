@@ -6,20 +6,21 @@
     <title>Brayan Carrillo - Portfolio</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="icon" href="images/logos/favicon.ico" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script>
             function expandCard(card) {
-                    card.querySelector('.details').classList.add('expanded'); }                                  
-                    function collapseCard(card) {
-                             card.querySelector('.details').classList.remove('expanded'); }
-                                                
+                    card.querySelector('.details').classList.add('expanded');}                                  
+            function collapseCard(card) {
+                    card.querySelector('.details').classList.remove('expanded');}
     </script>
 </head>
 <body>
-    <header>
+    <div id="spaceBackground"></div>
+    <div id="particles-container"></div>
+        <header>
         <h1>Brayan Jesús Carrillo Jiménez</h1>
         <p>Ingeniero en Control y Computación</p>
     </header>
-
     <nav>
         <ul>
             <li><a href="#home">Inicio</a></li>
@@ -114,5 +115,37 @@
         </div>
         <p>&copy; 2024 Brayan Carrillo Jiménez</p>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const particlesContainer = document.getElementById('particles-container');
+
+            // Crea 100 partículas y las añade al contenedor
+            for (let i = 0; i < 100; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = `${Math.random() * 100}vw`;
+                particle.style.top = `${Math.random() * 100}vh`;
+
+                particlesContainer.appendChild(particle);
+            }
+
+            // Animación con anime.js para mover las partículas de abajo a arriba
+            anime({
+                targets: '.particle',
+                translateY: [
+                    { value: '100vh', duration: 0 },
+                    { value: '-100vh', duration: 5000 }
+                ],
+                opacity: [
+                    { value: 0, duration: 0 },
+                    { value: 1, duration: 2000 },
+                    { value: 0, duration: 3000 }
+                ],
+                easing: 'linear',
+                delay: anime.stagger(100), // Agrega un pequeño retraso a cada partícula
+                loop: true
+            });
+        });
+    </script>
 </body>
 </html>
