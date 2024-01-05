@@ -2,16 +2,15 @@
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
+    background-color: #4d4d4d;
     padding: 0;
-    background-color: #005c99; /* Fondo oscuro */
-    color: #fff; /* Texto blanco */
-    overflow: hidden;
+    color: #fff; /* Color de texto para que sea legible sobre la imagen de fondo */
 }
 
 /* Encabezado */
 header {
     text-align: center;
-    padding: 40px 0;
+    padding: 40px 0; /* Ajuste del padding para espacio alrededor del texto */
     background-color: #333; /* Fondo más oscuro */
     color: #fff;
 }
@@ -57,13 +56,118 @@ nav a:hover {
 /* Contenido Principal */
 main {
     padding: 10px;
-    background-color: transparent;    
+}
+#home{
+    background-color: #3498db;
+    max-width: 900px;
+    margin-right: auto;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10cm;
+
+}
+#home img{
+    padding: 10px;
+    width: 200px;
+    height: 300px;
+    background-color: #333;
 }
 
+#Skills {
+    text-align: center;
+    background-color: #3498db;
+    margin-left: auto;
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 900px;
+    margin: right;
+    margin-bottom: 20cm;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan a la siguiente línea cuando no hay espacio */
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+}
+
+.skill-card {
+    width: 200px;
+    max-height: 100%;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+}
+
+.skill-card:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.skill-card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.skill-card h3 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+
+.expanded {
+    max-height: 100%; /* Elige una altura máxima suficientemente grande */
+}
+
+#estudios{
+    text-align: center;
+    border-radius: 10px;
+    background-color: #3498db;
+    padding: 15px;
+    max-width: 900px;
+    margin-right: auto;
+    margin-bottom: 20cm;
+}
+.study-item {
+    width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.study-item:hover {
+    transform: scale(1.1);
+}
+
+.study-item h3 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.study-item p {
+    font-size: 14px;
+    margin: 5px 0;
+}
 section {
     margin-bottom: 40px;
 }
-
 /* Imágenes de Sección */
 section img {
     max-width: 100%;
@@ -81,7 +185,7 @@ section img:hover {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #222; /* Fondo más oscuro */
+    background-color: #222;    
     color: #fff;
     position: fixed;
     bottom: -115px;

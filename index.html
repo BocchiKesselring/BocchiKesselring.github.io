@@ -1,47 +1,111 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brayan Carrillo - Portfolio</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/logos/favicon.ico" type="image/x-icon">
+    <script>
+            function expandCard(card) {
+                    card.querySelector('.details').classList.add('expanded'); }                                  
+                    function collapseCard(card) {
+                             card.querySelector('.details').classList.remove('expanded'); }
+                                                
+    </script>
 </head>
 <body>
     <header>
-        <h1>Brayan Carrillo</h1>
-        <p>Control and Computing Engineer</p>
+        <h1>Brayan Jesús Carrillo Jiménez</h1>
+        <p>Ingeniero en Control y Computación</p>
     </header>
 
     <nav>
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About me</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#about">Sobre mí</a></li>
+            <li><a href="#portfolio">Portafolio</a></li>
+            <li><a href="#contact">Contacto</a></li>
         </ul>
     </nav>
 
     <main>
-        <div id="particles-js">
         <section id="home">
-            <h2>Welcome to My Portfolio</h2>
-            <p>Explore my work and skills in front-end development.</p>
-            <img src="assets/images/home-image.jpg" alt="Home Image">
+            <h2>Un poco sobre mí</h2>
+            <p>Me llamo Brayan, soy oriundo de Nayarit, México. Me gustan las ciencias computacionales, los videojuegos y el anime.</p>
+            <p>He aquí mis anime/manga favoritos: </p>
+            <a href="https://es.wikipedia.org/wiki/Kaguya-sama:_Love_Is_War" target="_blank"><img src="images/imghayasaka.jpg" alt="Imagen de inicio"></a>
+            <a href="https://es.wikipedia.org/wiki/Dorohedoro" target="_blank"><img src="images/imgdorohedoro.jpg" alt="Imagen de inicio"></a>
+            <a href="https://es.wikipedia.org/wiki/Death_Note" target="_blank"><img src="images/imgdeathnote.jpg" alt="Imagen de inicio"></a>
+            <a href="https://es.wikipedia.org/wiki/Bocchi_the_Rock!" target="_blank"><img src="images/imgbocchitrock.jpg" alt="Imagen de inicio"></a>
+
+
         </section>
 
-        <section id="about">
-            <h2>About Me</h2>
-            <p>I'm a passionate front-end developer with a focus on creating responsive and user-friendly websites.</p>
+        <section id="Skills">
+            <h2>Skills</h2>
+            <p>
+                Como he mencionado anteriormente, me encantan las ciencias computacionales, además de la informatica y en general, la divulgación cientifica.
+            </p>
+            <div class="skills-container">
+                <div class="skill-card" onmouseover="expandCard(this)" onmouseout="collapseCard(this)">
+                    <strong>Programación</strong>
+                    <img src="images/Python-logo-notext.svg" alt="logo pythonlogo">
+                    <strong>Desarrollo Python</strong>
+                    <div class="details">
+                        <p>Tengo experiencia en programación desde mis estudios de bachiller.
+                            Durante la carrera llevé varias áreas de la programación y el Desarrollo de software,
+                            pero estoy más especializado en Python.
+                        </p>
+                    </div>    
+                </div>
+                <div class="skill-card" onmouseover="expandCard(this)" onmouseout="collapseCard(this)">
+                    <strong>Desarrollo Web</strong>
+                    <img src="images/htmllogo.png" alt="logo html">
+                    <strong>HTML5,CSS3,JS</strong>
+                    <div class="details">
+                        <p>Tengo experiencia escribiendo en HTML, CSS3, y JS; en general, front-end</p>
+                    </div>    
+                </div>
+                <div class="skill-card" onmouseover="expandCard(this)" onmouseout="collapseCard(this)">
+                    <strong>Internet de las cosas</strong>
+                    <img src="images/Arduino_Logo.svg" alt="Arduino_Logo">
+                    <strong>Arduino, NODEMCU, Raspberry</strong>
+                    <div class="details">
+                        <p>He desarrolado diversos proyectos de IoT y de software usado placas de desarrollo de Raspberry, Arduino y Nodemcu</p>
+                    </div>    
+                </div>
+                <div class="skill-card" onmouseover="expandCard(this)" onmouseout="collapseCard(this)">
+                    <strong>Machine Learning</strong>
+                    <img src="images/Scikit_learn_logo_small.svg" alt="Skitlearlogo">
+                    <strong>Skitlearn</strong>
+                    <div class="details">
+                        <p>Tengo los conocimientos basicos en analisis de datos así como en el aprendizaje automático y expenriencia en libreías como Skitlear y Tenserflow</p>
+                    </div>    
+                </div>
+                <div class="skill-card" onmouseover="expandCard(this)" onmouseout="collapseCard(this)">
+                    <strong>Microsoft Office Suite</strong>
+                    <img src="images/Officelogo.svg" alt="Officelogo">
+                    <div class="details">
+                        <p>Tengo experiencia usando Word y Exel</p>
+                    </div>    
+                </div>
+            </div>
         </section>
 
-        <section id="portfolio">
-            <h2>Portfolio</h2>
-            <!-- Your portfolio items go here -->
+        <section id="estudios">
+            <h2>Estudios</h2>
+            <div class="study-item">
+                <h3>Universidad Autónoma de Nayarit</h3>
+                <p>Ingeniería en Control y Computación</p>
+                <p>2018-2023</p>
+                <div>
+                <img src="images/Logo_de_la_UAN.svg">
+                </div>
+            </div>
+            <!-- Puedes repetir estos bloques para cada institución o título de estudio -->
         </section>
-    </div>
-    </main>
-    
+    </main>    
     <footer>
         <div class="social-icons">
             <a href="https://github.com/BocchiKesselring" target="_blank"><img src="images/logos/githublogo.png" alt="GitHub"></a>
