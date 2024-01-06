@@ -1,20 +1,5 @@
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #fff; /* Color de texto para que sea legible sobre la imagen de fondo */
-    position: relative;
-    background-color: #222222;
-}
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom right, #520081, #000000);
-    z-index: -1;
+*{
+    font-family: 'Times New Roman', Times, serif;    
 }
 
 body, h1, h2, p, ul, li {
@@ -22,40 +7,38 @@ body, h1, h2, p, ul, li {
     padding: 0;
 }
 
-/* Estilos generales del encabezado */
+/* Encabezado ------------------------------------------ */
 header {
-    background: rgba(0, 0, 0, 0.3); /* Fondo semitransparente (ajusta el último valor para cambiar la opacidad) */
-    backdrop-filter: blur(10px); /* Efecto de desenfoque (ajusta el valor según sea necesario) */
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(15px);
     color: #fff;
     width: 100%;
     text-align: center;
     padding: 20px;
+    margin: 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    box-sizing: border-box;
 
 }
 
-/* Estilos para el título principal */
-h1 {
-    font-size: 2em;
-    margin-bottom: 10px;
+header h1{
+    font-size: 20px;
 }
 
-/* Estilos para el subtítulo */
-p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
+header p{
+    font-size: 14px;
 }
 
-/* Estilos para el menú de navegación */
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
 }
 
-nav li {
+nav ul li {
     text-align: center;
-    margin: 30px 50px 30px 50px;
+    margin: 30px 50px;
     padding: 15px;
     border-radius: 5px;
     background-color: #530086;
@@ -63,56 +46,75 @@ nav li {
     width: 140px;
     height: 100%;
     transition: transform 0.3s ease;
-
 }
 
-nav a {
+nav ul li a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
     font-size: 1.1em;
 }
 
-nav li:hover{
+nav li:hover {
     background-color: #7c00c4;
     transform: scale(1.2);
 }
 
-main {
-    padding: 10px;
+body {
+    position: static;
+    background: linear-gradient(to bottom right, #520081, #000000);
 }
 
-#home{
+main {
+    margin: 0;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-height: calc(100vh - 105px);
+}
+
+/* Sección "Un poco sobre mí" */
+#home {
     background: transparent;
-    max-width: 900px;
-    margin-right: auto;
+    max-width: 1000px;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    margin: 10px auto 40px; /* Ajuste de márgenes */
     border-radius: 10px;
     padding: 15px;
-    margin-bottom: 10cm;
-
+    color: aliceblue;
 }
-#home img{
+
+#home img {
     padding: 10px;
+    margin: 10px 10px 5px;
     width: 200px;
     height: 300px;
     background-color: #333;
+    transition: transform 0.3s ease-in-out;
+}
+
+#home img:hover{
+
+    transform: scale(1.2);
+
 }
 
 #Skills {
+    color: #fff;
     text-align: center;
     background: transparent;
-    margin-left: auto;
+    margin: 0 auto 20px; /* Ajuste de márgenes */
     padding: 15px;
+    width: 100%;
     border-radius: 10px;
     max-width: 900px;
-    margin: right;
-    margin-bottom: 20cm;
 }
 
 .skills-container {
     display: flex;
-    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan a la siguiente línea cuando no hay espacio */
-    justify-content: center; /* Centra las tarjetas horizontalmente */
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .skill-card {
@@ -128,8 +130,8 @@ main {
     transition: transform 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centra verticalmente */
-    align-items: center; /* Centra horizontalmente */
+    justify-content: center;
+    align-items: center;
 }
 
 .skill-card:hover {
@@ -155,18 +157,19 @@ main {
 }
 
 .expanded {
-    max-height: 100%; /* Elige una altura máxima suficientemente grande */
+    max-height: 100%;
 }
 
-#estudios{
+#estudios {
+    color: #fff;
     text-align: center;
     border-radius: 10px;
     background: transparent;
     padding: 15px;
-    max-width: 100px;
-    margin-right: auto;
+    max-width: 100%;
     margin-bottom: 20cm;
 }
+
 .study-item {
     width: 300px;
     margin: 20px auto;
@@ -190,21 +193,21 @@ main {
     font-size: 14px;
     margin: 5px 0;
 }
-section {
-    margin-bottom: 40px;
+
+.study-item img{
+    width: 30px;
+    height: 40px;
 }
 footer {
     position: absolute;
-    bottom: -115px;
+    bottom: 1;
     width: 100%;
     text-align: center;
     padding: 20px;
     background-color: #222;
     color: #fff;
-    overflow: hidden;
-    max-height: 105px; /* Establece la altura máxima que quieres mostrar inicialmente */
-    transition: max-height 0.7s ease-in-out;
-    z-index: 1;
+    box-sizing: border-box;
+
 }
 
 #footer-handle img {
@@ -216,33 +219,14 @@ footer:hover {
     max-height: 300px; /* Ajusta según la altura total del footer */
 }
 
-footer .social-icons {
-    margin-bottom: 15px;
-}
-
-footer a {
-    margin: 0 10px;
-}
-
-footer img {
-    width: 40px;
-    height: 40px;
-    transition: transform 0.5s ease;
-}
-
-footer img:hover {
-    transform: scale(1.2);
-}
-
 .footer-items-container {
     display: flex;
-    justify-content: space-around; /* Ajusta según tu preferencia */
+    justify-content: space-around;
     align-items: center;
 }
 
 .footer-item {
     text-align: center;
-    margin-right: 10px; /* Espacio entre las imágenes */
 }
 
 .footer-item img {
@@ -253,7 +237,6 @@ footer img:hover {
 .footer-item p {
     margin: 0;
     font-weight: bold;
-
 }
 
 .social-icons {
@@ -273,24 +256,4 @@ footer img:hover {
 
 .social-icons img:hover {
     transform: scale(1.2);
-}
-
-#particles-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: -1;
-}
-.particle {
-    position: absolute;
-    background: #fff; /* Color de las partículas */
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    opacity: 0;
-    filter: brightness(150%);
-    box-shadow: 0 0 10px 5px #aa4cf7; /* Ajusta estos valores para la apariencia deseada */
 }

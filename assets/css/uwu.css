@@ -1,5 +1,171 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    position: relative;
+    background-color: #222222;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, #520081, #000000);
+    z-index: -1;
+}
+
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado */
+header {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Navegación */
+
+
+/* Contenido principal */
+main {
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Sección "Un poco sobre mí" */
+#home {
+    background: transparent;
+    max-width: 900px;
+    margin: 0 auto 10px; /* Ajuste de márgenes */
+    border-radius: 10px;
+    padding: 15px;
+}
+
+#home img {
+    padding: 10px;
+    width: 200px;
+    height: 300px;
+    background-color: #333;
+}
+
+/* Sección "Skills" */
+#Skills {
+    text-align: center;
+    background: transparent;
+    margin: 0 auto 20px; /* Ajuste de márgenes */
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 900px;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill-card {
+    width: 200px;
+    max-height: 100%;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill-card:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.skill-card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.skill-card h3 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+
+.expanded {
+    max-height: 100%;
+}
+
+/* Sección "Estudios" */
+#estudios {
+    text-align: center;
+    border-radius: 10px;
+    background: transparent;
+    padding: 15px;
+    max-width: 100%;
+    margin: 0 auto 20px; /* Ajuste de márgenes */
+}
+
+.study-item {
+    width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.study-item:hover {
+    transform: scale(1.1);
+}
+
+.study-item h3 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.study-item p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+/* Pie de página */
 footer {
-    position: absorelute;
+    position: relative;
     bottom: -115px;
     width: 100%;
     text-align: center;
@@ -7,18 +173,16 @@ footer {
     background-color: #222;
     color: #fff;
     overflow: hidden;
-    max-height: 105px; /* Establece la altura máxima que quieres mostrar inicialmente */
+    max-height: 105px;
     transition: max-height 0.7s ease-in-out;
-    z-index: 1;
 }
-
 #footer-handle img {
     width: 120px;
     height: 120px;
 }
 
 footer:hover {
-    max-height: 300px; /* Ajusta según la altura total del footer */
+    max-height: 300px;
 }
 
 footer .social-icons {
@@ -41,13 +205,13 @@ footer img:hover {
 
 .footer-items-container {
     display: flex;
-    justify-content: space-around; /* Ajusta según tu preferencia */
+    justify-content: space-around;
     align-items: center;
 }
 
 .footer-item {
     text-align: center;
-    margin-right: 10px; /* Espacio entre las imágenes */
+    margin-right: 10px;
 }
 
 .footer-item img {
@@ -58,7 +222,6 @@ footer img:hover {
 .footer-item p {
     margin: 0;
     font-weight: bold;
-
 }
 
 .social-icons {
@@ -80,6 +243,7 @@ footer img:hover {
     transform: scale(1.2);
 }
 
+/* Partículas del fondo del pie de página */
 #particles-container-footer {
     position: relative;
     width: 100%;
@@ -92,5 +256,5 @@ footer img:hover {
     height: 10px;
     border-radius: 50%;
     filter: brightness(150%);
-    box-shadow: 0 0 10px 5px #aa4cf7; /* Ajusta estos valores para la apariencia deseada */
+    box-shadow: 0 0 10px 5px #aa4cf7;
 }
