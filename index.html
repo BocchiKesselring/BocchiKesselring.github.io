@@ -6,19 +6,21 @@
     <title>Brayan Carrillo - Portfolio</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="icon" href="images/logos/favicon.ico" type="image/x-icon">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1"></script>
     <script>
-            function expandCard(card) {
-                    card.querySelector('.details').classList.add('expanded');}                                  
-            function collapseCard(card) {
-                    card.querySelector('.details').classList.remove('expanded');}
-            function redirectTo(target) {
-            window.location.href = target;
-        }
+        function expandCard(card) {
+                card.querySelector('.details').classList.add('expanded');}                                  
+        function collapseCard(card) {
+                card.querySelector('.details').classList.remove('expanded');}
+        function redirectTo(target) {
+        window.location.href = target;
+                                    }
     </script>
 </head>
 <body>
-    <!-- <div id="particles-container"></div> -->
+    <div id="background-container">
+        <div id="particles-container"></div>
+    </div>
     <header>
         <h1>Brayan Jesús Carrillo Jiménez</h1>
         <p>Ingeniero en Control y Computación</p>
@@ -137,6 +139,21 @@
             <a href="https://wa.me/+523111632873" target="_blank"><img src="images/logos/whatsapplogo.png" alt="whastapp"></a>
         </div>
         <p>&copy; 2024 | Brayan Jesús Carrillo Jiménez. | Todos los derechos reservados.</p>
-    </footer> 
+    </footer>
+
+<script>
+      document.addEventListener('DOMContentLoaded', function() {
+            animateBackground(); // Llama a la función de animación al cargar la página
+        });
+
+        function animateBackground() {
+            anime({
+                targets: '#background-container::before', // Selector del elemento al que quieres aplicar la animación
+                backgroundColor: ['#520081', '#000000'], // Cambia estos colores según tus preferencias
+                duration: 5000, // Duración en milisegundos
+                loop: true // Repetir la animación
+            });
+        }
+</script> 
 </body>
 </html>
