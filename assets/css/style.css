@@ -1,4 +1,3 @@
-/* Reset y Estilos Generales */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -7,7 +6,6 @@ body {
     position: relative;
     background-color: #222222;
 }
-
 body::before {
     content: '';
     position: fixed;
@@ -19,77 +17,71 @@ body::before {
     z-index: -1;
 }
 
-#particles-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: -1;
-}
-
-.particle {
-    position: absolute;
-    background: #fff; /* Color de las partículas */
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    opacity: 0;
-    filter: brightness(150%);
-    box-shadow: 0 0 10px 5px #aa4cf7; /* Ajusta estos valores para la apariencia deseada */
-}
-
-header {
-    text-align: center;
-    width: 100%;
-    padding: 40px 0; /* Ajuste del padding para espacio alrededor del texto */
-    background-color: #333; /* Fondo más oscuro */
-    color: #fff;
-}
-
-header h1 {
-    margin: 0;
-}
-
-header p {
-    font-size: 18px;
-}
-
-/* Barra de Navegación */
-nav {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #222; /* Fondo más oscuro */
-}
-
-nav ul {
-    list-style: none;
+body, h1, h2, p, ul, li {
     margin: 0;
     padding: 0;
 }
 
+/* Estilos generales del encabezado */
+header {
+    background: rgba(0, 0, 0, 0.3); /* Fondo semitransparente (ajusta el último valor para cambiar la opacidad) */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque (ajusta el valor según sea necesario) */
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Estilos para el título principal */
+h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+/* Estilos para el subtítulo */
+p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el menú de navegación */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
 nav li {
-    display: inline-block;
-    margin: 0 15px;
+    text-align: center;
+    margin: 30px 50px 30px 50px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #530086;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 140px;
+    height: 100%;
+    transition: transform 0.3s ease;
+
 }
 
 nav a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
-    font-size: 16px;
-    transition: color 0.3s ease;
+    font-size: 1.1em;
 }
 
-nav a:hover {
-    color: #3498db; /* Color de enlace en hover */
+nav li:hover{
+    background-color: #7c00c4;
+    transform: scale(1.2);
 }
 
-/* Contenido Principal */
 main {
     padding: 10px;
 }
+
 #home{
     background: transparent;
     max-width: 900px;
@@ -201,34 +193,8 @@ main {
 section {
     margin-bottom: 40px;
 }
-/* Imágenes de Sección */
-section img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.5s ease;
-}
-
-section img:hover {
-    transform: scale(1.1);
-}
-
-/* Pie de Página */
 footer {
     position: absolute;
-    bottom: -115px;
-    width: 100%;
-    text-align: center;
-    padding: 20px;
-    background-color: #222;
-    color: #fff;
-    overflow: hidden;
-    transition: bottom 0.7s ease-in-out;
-}
-
-footer {
-    position: absorelute;
     bottom: -115px;
     width: 100%;
     text-align: center;
@@ -309,17 +275,22 @@ footer img:hover {
     transform: scale(1.2);
 }
 
-#particles-container-footer {
-    position: relative;
+#particles-container {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
 }
-
-.particle-footer {
+.particle {
     position: absolute;
-    background-color: #edd3f8;
-    width: 10px;
-    height: 10px;
+    background: #fff; /* Color de las partículas */
+    width: 4px;
+    height: 4px;
     border-radius: 50%;
+    opacity: 0;
     filter: brightness(150%);
     box-shadow: 0 0 10px 5px #aa4cf7; /* Ajusta estos valores para la apariencia deseada */
 }

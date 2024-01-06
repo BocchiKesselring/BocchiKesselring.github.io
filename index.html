@@ -12,24 +12,27 @@
                     card.querySelector('.details').classList.add('expanded');}                                  
             function collapseCard(card) {
                     card.querySelector('.details').classList.remove('expanded');}
+            function redirectTo(target) {
+            window.location.href = target;
+        }
     </script>
 </head>
 <body>
     <div id="spaceBackground"></div>
     <div id="particles-container"></div>
-        <header>
+    <header>
         <h1>Brayan Jesús Carrillo Jiménez</h1>
         <p>Ingeniero en Control y Computación</p>
+    
     </header>
     <nav>
         <ul>
-            <li><a href="#home">Inicio</a></li>
-            <li><a href="#resume">Curriculum</a></li>
-            <li><a href="#portfolio">Portafolio</a></li>
-            <li><a href="#contact">Contacto</a></li>
+            <li onclick="redirectTo('index.html')"><a href="index.html">Inicio</a></li>
+            <li onclick="redirectTo('pages/resume.html')"><a href="pages/resume.html">Curriculum</a></li>
+            <li onclick="redirectTo('pages/portafolio.html')"><a href="pages/portafolio.html">Portafolio</a></li>
+            <li onclick="redirectTo('pages/contact.html')"><a href="pages/contact.html">Contacto</a></li>
         </ul>
     </nav>
-
     <main>
         <section id="home">
             <h2>Un poco sobre mí</h2>
@@ -107,7 +110,8 @@
             <!-- Puedes repetir estos bloques para cada institución o título de estudio -->
         </section>
     </main>    
-    <footer>
+     <footer> 
+        </section>
         <div id="particles-container-footer"></div>
 
         <div id="footer-handle" class="footer-items-container">
@@ -134,7 +138,7 @@
             <a href="#" target="_blank"><img src="images/logos/iglogo.png" alt="Instagram"></a>
         </div>
         <p>&copy; 2024 | Brayan Jesús Carrillo Jiménez. | Todos los derechos reservados.</p>
-    </footer>
+    </footer> 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const particlesContainer = document.getElementById('particles-container');
