@@ -89,42 +89,42 @@ header p{
     font-size: 14px;
 }
 
-nav{
+.nav-header{
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
 }
-nav ul {
+.nav-header ul {
     list-style: none;
     display: flex;
     justify-content: center;
     margin: 0px 10px 0px;
 }
 
-nav li {
+.nav-header li {
     margin: 0 30px;
     transition: transform 0.3s ease;
 }
 
-nav a {
+.nav-header a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
     font-size: 1.1em;
 }
 
-nav li:hover {
+.nav-header li:hover {
     transform: scale(1.2);
 }
 
-li {
+.li-header {
     position: relative;
     overflow: hidden;
     padding: 5px;
 }
 
-li::after {
+.li-header::after {
     content: '';
     position: absolute;
     top: 0;
@@ -139,13 +139,39 @@ li::after {
     border-radius: 5px;
 }
 
-li:hover::after {
+.li-header:hover::after {
     transform: scaleX(1);
 }
 
-body {
-    position: static;
-    background: linear-gradient(to bottom right, #520081, #000000);
+.love-container {
+    list-style: none;
+    display: flex;
+    justify-content: space-around; /* Para espaciado uniforme entre elementos */
+    padding: 0;
+    margin: 40px;
+
+}
+
+.love-list {
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+    width: 150px; /* Ajusta según tus preferencias */
+    margin: 10px; /* Espaciado entre elementos */
+    transition: background 0.5s, color 0.5s;
+    display: inline-block;
+    transition: transform 0.3s ease;
+    font-weight: bold;
+
+}
+
+.love-list:hover{
+    background-color: #640083;
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+
+
 }
 
 main {
