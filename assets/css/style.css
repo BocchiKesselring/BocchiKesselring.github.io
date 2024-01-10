@@ -23,71 +23,81 @@ html{
 /*---------------------------------------------------------- Header */
 /* General header styles */
 .header-box {
-    background-color: #0000007e; /* Fondo gris claro */
-    padding: 20px 0; /* Espacio interno */
-    display: flex; /* Elementos en fila */
-    justify-content: center; /* Distribuir elementos */
-    align-items: center; /* Alinear verticalmente */
-    margin-top: 50px; /* Espacio superior */
-    margin-bottom: 50px; /* Espacio inferior */
-    color: #fff;
-    border-top: none; /* Elimina la línea de borde superior */
-    border-bottom: none; /* Elimina la línea de borde inferior */
+  background-color: #0000007e;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column; /* Cambia la dirección a columna */
+  align-items: center; /* Centrar horizontalmente */
+  margin-bottom: 50px;
+  color: #fff;
+  border-top: none;
+  border-bottom: none;
 }
 
-  /* Título */
-  .title-header {
-    font-size: 18px; /* Tamaño de la fuente */
-    font-weight: bold; /* Negrita */
-    text-align: center; /* Centrar */
-    margin-left: 80px; /* Espacio izquierdo */
-  }
-  
-  /* Navegación */
-  .nav-container {
-    display: flex; /* Elementos en fila */
-    list-style: none; /* Quitar viñetas */
-    margin: 0 40px 0 40px; /* Espacio entre elementos */
-    padding: 0; /* Eliminar padding */
-    justify-content: space-between; /* Distribuir elementos */
-  }
+/* Título */
+.title-header {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
 
-  .ul-nav-header{
-    display: flex; /* Elementos en fila */
-    list-style: none; /* Quitar viñetas */
-    margin: 0; /* Eliminar margenes */
-    padding: 0; /* Eliminar padding */
-    justify-content: space-between; /* Distribuir elementos */
-  }
-  
-  .nav-header li {
-    margin-right: 20px; /* Espacio entre elementos */
-  }
-  
-  .li-header-item {
-    margin-right: 20px;
-  }
-  
-  .li-header-item a {
-    text-decoration: none; /* Eliminar subrayado */
-    color: #f5f5f5; /* Color del texto */
-    font-size: 18px;
-    font-weight: bold; /* Texto en negrita */
-    transition: font-size 0.4s ease; /* Agrega la transición aquí */
-  }
-  
-  /* Efecto al pasar el mouse sobre los enlaces */
-  .li-header-item a:hover {
-    color: #cd00d4;
-    transition: color 0.4s ease;
-    transition: font-size 0.4s ease; /* Agrega la transición aquí */
-    font-size: 1.4em; /* Cambia el tamaño de la letra al pasar el ratón */
+/* Navegación */
+.nav-container {
+  display: flex;
+  list-style: none;
+  margin: 20px 0; /* Ajusta el margen según sea necesario */
+  padding: 0;
+}
 
-  }
-  
+.ul-nav-header {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-header li {
+  margin-right: 20px;
+}
+
+.li-header-item {
+  margin-right: 20px;
+}
+
+.li-header-item a {
+  text-decoration: none;
+  color: #f5f5f5;
+  font-size: 18px;
+  font-weight: bold;
+  transition: font-size 0.4s ease, color 0.4s ease;
+}
+
+/* Efecto al pasar el mouse sobre los enlaces */
+.li-header-item a:hover {
+  color: #b92727;
+  font-size: 1.4em;
+}
+
+/* Carta de presentación */
+.presentation-card-container {
+  margin-left: 20px; /* Ajusta el espacio izquierdo según sea necesario */
+}
   /* Presentación */
   .presentation-card-container {
-    text-align: right; /* Alinear a la derecha */
+    text-align: center; /* Alinear a la derecha */
+    background-image: url("../images/background-presentation.jpg"); /* Agrega la imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+
+  }
+
+  .presentation-card{
+    padding: 20px;
+    color: #b92727;
+    text-shadow: 0 0 10px #ff0000;
+    border: 3px solid #000;
+    border-radius: 5px;
   }
   
   .presentation-card h2 {
@@ -101,9 +111,14 @@ html{
     font-weight: bold; /* Negrita */
     margin-bottom: 4px; /* Espacio entre títulos */
   }
+  .imagen-presentation {
+    /* Estilos para la imagen */
+    width: 100%; /* Ajusta el ancho de la imagen al ancho del contenedor */
+    height: auto; /* Permite que la altura de la imagen se ajuste automáticamente al ancho */
+    margin: 0 auto; /* Centra la imagen en el contenedor */
+  }
 
-  
-  
+
   /* Responsive styles */
   @media (max-width: 768px) {
     .header-box {
@@ -134,7 +149,7 @@ body::before{
     bottom: 0;
     left: 0;
     /* Establece un degradado lineal de arriba a abajo con dos colores */
-    background: linear-gradient(to bottom right, #23102b, #2c1336, #2f1747, #381b3f);
+    background: linear-gradient(to bottom right, #301313, #361111, #3a0f0f, #5a0f0f);
     /* Aplica la animación al pseudo-elemento */
     animation: brilloAnimacion 10s infinite; /* Ajusta la duración según sea necesario */
     z-index: -999;
