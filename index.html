@@ -1,125 +1,137 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brayan Carrillo - Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="icon" href="images/logos/favicon.ico" type="image/x-icon">
-    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1"></script>
+    <title>Brayan-Portafolio</title>
     <script>
-        function expandCard(card) {
-                card.querySelector('.details').classList.add('expanded');}                                  
-        function collapseCard(card) {
-                card.querySelector('.details').classList.remove('expanded');}
-        function redirectTo(target) {
-        window.location.href = target;
-                                    }
     </script>
 </head>
 <body>
-    <div id="background-container">
-        <div id="particles-container"></div>
-    </div>
-    <header>
-        <div class="profile-box">
-            <img src="images/profile-picture.jpg" alt="Foto de perfil">
-            <h1>Brayan Jesús Carrillo Jiménez.</h1>
-            <p>Ingeniero en Control y Computación.</p>
-        </div>
-        <div class="header-content">
+    <header class="header-box">
+        <div class="title-header-container">
+            <div class="title-header">
+                <h1>
+                    Willkommen!
+                </h1>
+            </div>
+         </div>
+         <div class="nav-container">
             <nav class="nav-header">
-                <ul class="ul-header">
-                    <li onclick="redirectTo('index.html')" class="li-header"><a href="index.html">Inicio</a></li>
-                    <li onclick="redirectTo('pages/resume.html')" class="li-header"><a href="pages/resume.html">Curriculum</a></li>
-                    <li onclick="redirectTo('pages/portafolio.html')" class="li-header"><a href="pages/portafolio.html">Portafolio</a></li>
-                    <li onclick="redirectTo('pages/contact.html')" class="li-header"><a href="pages/contact.html">Contacto</a></li>
+                <ul class="ul-nav-header">
+                    <li class="li-header-item">
+                        <a href="index.html">Inicio</a>
+                    </li>
+                    <li class="li-header-item">
+                        <a href="pages/curriculum.html">Curriculum</a>
+                    </li>
+                    <li class="li-header-item">
+                        <a href="pages/portafolio.html">Portafolio</a>
+                    </li>
+                    <li class="li-header-item">
+                        <a href="pages/contatc.html">Contacto</a>
+                    </li>
                 </ul>
             </nav>
         </div>
+        <div class="presentation-card-container">
+            <div class ="presentation-card">
+                <h2>Brayan Jesús Carrillo Jiménez</h2>
+                <p>Ingeniero en Control y Computación</p>
+            </div>
+        </div>    
     </header>
-    <main>
-        <section id="home">
-            <h2>Un poco sobre mí</h2>
-            <p>Soy una persona que solo desea una vida tranquila. Me encantan las compuadoras, las ciencias compuacionales y la ciencia en general.</p>
-            <h1>Me encanta...</h1>
-            <ul class="love-container">
-                <li class="love-list">Las Ciencias compuacionales</li>
-                <li class="love-list">La cultura geek</li>
-            </ul>
-            <p>Aquí abajo pongo algunas obras que recomiendo y hablan un poco de mí :D. 👇</p>
-            <a href="https://es.wikipedia.org/wiki/Kaguya-sama:_Love_Is_War" target="_blank"><img src="images/imghayasaka.jpg" alt="Imagen de inicio"></a>
-            <a href="https://es.wikipedia.org/wiki/Dorohedoro" target="_blank"><img src="images/imgdorohedoro.jpg" alt="Imagen de inicio"></a>
-            <a href="https://es.wikipedia.org/wiki/Death_Note" target="_blank"><img src="images/imgdeathnote.jpg" alt="Imagen de inicio"></a>
-            <a href="https://es.wikipedia.org/wiki/Bocchi_the_Rock!" target="_blank"><img src="images/imgbocchitrock.jpg" alt="Imagen de inicio"></a>
-        </section>
-        <section id="Skills">
-            <h2>Skills</h2>
-            <p>
-                Como he mencionado anteriormente, me encantan las ciencias computacionales, además de la informatica y en general, la divulgación cientifica.
-            </p>
-            <div class="skills-container">
-                <div class="skill-card" onmouseover="expandCard(this)" onmouseout="collapseCard(this)">
-                    <strong>Programación</strong>
-                    <img src="images/Python-logo-notext.svg" alt="logo pythonlogo">
-                    <strong>Desarrollo Python</strong>
-                    <div class="details">
-                        <p>Tengo experiencia en programación desde mis estudios de bachiller.
-                            Durante la carrera llevé varias áreas de la programación y el Desarrollo de software,
-                            pero estoy más especializado en Python.
-                        </p>
-                    </div>    
-                </div>
-                <div class="skill-card" onmouseover="expandCard(this)" onmouseout="collapseCard(this)">
-                    <strong>Desarrollo Web</strong>
-                    <img src="images/htmllogo.png" alt="logo html">
-                    <strong>HTML5,CSS3,JS</strong>
-                    <div class="details">
-                        <p>Tengo experiencia escribiendo en HTML, CSS3, y JS; en general, front-end</p>
-                    </div>    
-                </div>
-                <div class="skill-card" onmouseover="expandCard(this)" onmouseout="collapseCard(this)">
-                    <strong>Internet de las cosas</strong>
-                    <img src="images/Arduino_Logo.svg" alt="Arduino_Logo">
-                    <strong>Arduino, NODEMCU, Raspberry</strong>
-                    <div class="details">
-                        <p>He desarrolado diversos proyectos de IoT y de software usado placas de desarrollo de Raspberry, Arduino y Nodemcu</p>
-                    </div>    
-                </div>
-                <div class="skill-card" onmouseover="expandCard(this)" onmouseout="collapseCard(this)">
-                    <strong>Machine Learning</strong>
-                    <img src="images/Scikit_learn_logo_small.svg" alt="Skitlearlogo">
-                    <strong>Skitlearn</strong>
-                    <div class="details">
-                        <p>Tengo los conocimientos basicos en analisis de datos así como en el aprendizaje automático y expenriencia en libreías como Skitlear y Tenserflow</p>
-                    </div>    
-                </div>
-                <div class="skill-card" onmouseover="expandCard(this)" onmouseout="collapseCard(this)">
-                    <strong>Microsoft Office Suite</strong>
-                    <img src="images/Officelogo.svg" alt="Officelogo">
-                    <div class="details">
-                        <p>Tengo experiencia usando Word y Exel</p>
-                    </div>    
-                </div>
-            </div>
-        </section>
-        <section id="estudios">
-            <h2>Estudios</h2>
-            <div class="study-item">
-                <h3>Universidad Autónoma de Nayarit</h3>
-                <p>Ingeniería en Control y Computación</p>
-                <p>2018-2023</p>
-                <div>
-                <img src="images/Logo_de_la_UAN.svg">
-                </div>
-            </div>
-            <!-- Puedes repetir estos bloques para cada institución o título de estudio -->
-        </section>
-    </main>    
-     <footer> 
-        </section>
+    <div class="main-container">
+        <main class="main">
+            <article>
+                <section>
+                        <h3>Un poco sobre mí</h3>
+                        <p>Soy una persona que solo desea una vida tranquila. Me encantan las compuadoras, las ciencias compuacionales y la ciencia en general.</p>
+                        <h3>Me encanta...</h3>
+                            <ul class="love-container">
+                                <li class="love-list">Las Ciencias compuacionales</li>
+                                <li class="love-list">El anime</li>
+                            </ul>
+                            <div class="likes-container">
+                                <p>Aquí abajo pongo algunas obras que recomiendo y hablan un poco de mí :D. 👇</p>
+                                <a href="https://es.wikipedia.org/wiki/Kaguya-sama:_Love_Is_War" target="_blank"><img src="images/imghayasaka.jpg" alt="imghayasaka"></a>
+                                <a href="https://es.wikipedia.org/wiki/Dorohedoro" target="_blank"><img src="images/imgdorohedoro.jpg" alt="imgdorohedoro"></a>
+                                <a href="https://es.wikipedia.org/wiki/Death_Note" target="_blank"><img src="images/imgdeathnote.jpg" alt="imgdeathnote"></a>
+                                <a href="https://es.wikipedia.org/wiki/Bocchi_the_Rock!" target="_blank"><img src="images/imgbocchitrock.jpg" alt="Imagen de inicio"></a>
+                            </div>
+                </section>
+            </article>
+            <article>
+                <section>
+                    <h3>Skills</h3>
+                    <p>
+                        Como he mencionado anteriormente, me encantan las ciencias computacionales, además de la informatica y en general, la divulgación cientifica.
+                    </p>
+                    <div class="skills-container">
+                        <div class="skill-card" onmouseover="expandCard(this)" onmouseout="collapseCard(this)">
+                            <strong>Programación</strong>
+                            <img src="images/Python-logo-notext.svg" alt="logo pythonlogo">
+                            <strong>Desarrollo Python</strong>
+                            <div class="details">
+                                <p>Tengo experiencia en programación desde mis estudios de bachiller.
+                                    Durante la carrera llevé varias áreas de la programación y el Desarrollo de software,
+                                    pero estoy más especializado en Python.
+                                </p>
+                            </div>    
+                        </div>
+                        <div class="skill-card" onmouseover="expandCard(this)" onmouseout="collapseCard(this)">
+                            <strong>Desarrollo Web</strong>
+                            <img src="images/htmllogo.png" alt="logo html">
+                            <strong>HTML5,CSS3,JS</strong>
+                            <div class="details">
+                                <p>Tengo experiencia escribiendo en HTML, CSS3, y JS; en general, front-end</p>
+                            </div>    
+                        </div>
+                        <div class="skill-card" onmouseover="expandCard(this)" onmouseout="collapseCard(this)">
+                            <strong>Internet de las cosas</strong>
+                            <img src="images/Arduino_Logo.svg" alt="Arduino_Logo">
+                            <strong>Arduino, NODEMCU, Raspberry</strong>
+                            <div class="details">
+                                <p>He desarrolado diversos proyectos de IoT y de software usado placas de desarrollo de Raspberry, Arduino y Nodemcu</p>
+                            </div>    
+                        </div>
+                        <div class="skill-card" onmouseover="expandCard(this)" onmouseout="collapseCard(this)">
+                            <strong>Machine Learning</strong>
+                            <img src="images/Scikit_learn_logo_small.svg" alt="Skitlearlogo">
+                            <strong>Skitlearn</strong>
+                            <div class="details">
+                                <p>Tengo los conocimientos basicos en analisis de datos así como en el aprendizaje automático y expenriencia en libreías como Skitlear y Tenserflow</p>
+                            </div>    
+                        </div>
+                        <div class="skill-card" onmouseover="expandCard(this)" onmouseout="collapseCard(this)">
+                            <strong>Microsoft Office Suite</strong>
+                            <img src="images/Officelogo.svg" alt="Officelogo">
+                            <div class="details">
+                                <p>Tengo experiencia usando Word y Exel</p>
+                            </div>    
+                        </div>
+                    </div>
+                </section>
+            </article>
+            <article>
+                <section>
+                    <h2>Estudios</h2>
+                        <div class="study-item">
+                            <h3>Universidad Autónoma de Nayarit</h3>
+                                <p>Ingeniería en Control y Computación</p>
+                                <p>2018-2023</p>
+                            <div>
+                                <img src="images/Logo_de_la_UAN.svg">
+                            </div>
+                         </div>
+                </section>
+            </article>
+        </main>
+    </di>
+    <footer>
         <div id="particles-container-footer"></div>
-
         <div id="footer-handle" class="footer-items-container">
             <div class="footer-item">
                 <img src="images/footeranime2.png" alt="Anime 2">
@@ -146,20 +158,5 @@
         </div>
         <p>&copy; 2024 | Brayan Jesús Carrillo Jiménez. | Todos los derechos reservados.</p>
     </footer>
-
-<script>
-      document.addEventListener('DOMContentLoaded', function() {
-            animateBackground(); // Llama a la función de animación al cargar la página
-        });
-
-        function animateBackground() {
-            anime({
-                targets: '#background-container::before', // Selector del elemento al que quieres aplicar la animación
-                backgroundColor: ['#520081', '#000000'], // Cambia estos colores según tus preferencias
-                duration: 5000, // Duración en milisegundos
-                loop: true // Repetir la animación
-            });
-        }
-</script> 
 </body>
 </html>

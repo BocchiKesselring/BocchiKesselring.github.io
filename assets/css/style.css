@@ -1,369 +1,143 @@
-*{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin: 0;
-    padding: 0;    
-}
-
-body, h1, h2, p, ul, li {
-    margin: 0;
-    padding: 0;
-}
-
-#background-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background: linear-gradient(to bottom right, #99001a, #1f0029, #530074);
-    animation: backgroundAnimation 5s infinite alternate;
-}
-
-@keyframes backgroundAnimation {
-    from {
-        filter: brightness(1.0s);
-    }
-    to {
-        filter: brightness(0.5);
-    }
-}
-
-/* Encabezado ------------------------------------------ */
-header {
-    background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(15px);
-    color: #fff;
-    width: 100%;
-    text-align: center;
-    padding: 20px;
-    margin: 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: relative;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    display: flex;
-}
-
-.profile-box img {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-}
-
-.header-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-header::after {
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red, violet);
-    background-size: 200% 100%; /* Ajusta la cantidad de colores y la dirección del gradiente */
-    animation: rainbow 4s linear infinite;
-}
-
-@keyframes rainbow {
+@keyframes brilloAnimacion {
     0% {
-        background-position: 100% 0;
+      filter: brightness(0.8);
+    }
+    50% {
+      filter: brightness(1.5);
     }
     100% {
-        background-position: -100% 0;
+      filter: brightness(0.8);
     }
+  }
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-header h1{
-    margin-bottom: 10px;
-    font-size: 20px;
-}
-
-header p{
-    font-size: 14px;
-}
-
-.nav-header{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-.nav-header ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    margin: 0px 10px 0px;
-}
-
-.nav-header li {
-    margin: 0 30px;
-    transition: transform 0.3s ease;
-}
-
-.nav-header a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    font-size: 1.1em;
-}
-
-.nav-header li:hover {
-    transform: scale(1.2);
-}
-
-.li-header {
-    position: relative;
-    overflow: hidden;
-    padding: 5px;
-}
-
-.li-header::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to right, #7c00c4, #a200ca);
-    z-index: -1;
-    transform: scaleX(0);
-    transform-origin: 0% 50%;
-    transition: transform 0.3s ease;
-    border-radius: 5px;
-}
-
-.li-header:hover::after {
-    transform: scaleX(1);
-}
-
-.love-container {
-    list-style: none;
-    display: flex;
-    justify-content: space-around; /* Para espaciado uniforme entre elementos */
+html{
+    height: 0;
+    margin: 0;
     padding: 0;
-    margin: 40px;
-
 }
 
-.love-list {
-    align-items: center;
-    text-align: center;
-    padding: 15px;
-    border-radius: 8px;
-    width: 150px; /* Ajusta según tus preferencias */
-    margin: 10px; /* Espaciado entre elementos */
-    transition: background 0.5s, color 0.5s;
-    display: inline-block;
-    transition: transform 0.3s ease;
-    font-weight: bold;
-
-}
-
-.love-list:hover{
-    background-color: #640083;
-    transform: scale(1.2);
-    transition: transform 0.3s ease;
-
-
-}
-
-main {
-    margin: 0;
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    min-height: calc(100vh - 105px);
-}
-
-/* Sección "Un poco sobre mí" */
-#home {
-    background: transparent;
-    max-width: 1000px;
-    text-align: center;
-    justify-content: center;
-    position: relative;
-    margin: 10px auto 40px; /* Ajuste de márgenes */
-    border-radius: 10px;
-    padding: 15px;
-    color: aliceblue;
-}
-
-#home img {
-    padding: 10px;
-    margin: 10px 10px 5px;
-    width: 200px;
-    height: 300px;
-    background-color: #333;
-    transition: transform 0.3s ease-in-out;
-    border-radius: 8px;
-}
-
-#home img:hover{
-
-    transform: scale(1.2);
-
-}
-
-#Skills {
+/*---------------------------------------------------------- Header */
+/* General header styles */
+.header-box {
+    background-color: #0000007e; /* Fondo gris claro */
+    padding: 20px 0; /* Espacio interno */
+    display: flex; /* Elementos en fila */
+    justify-content: center; /* Distribuir elementos */
+    align-items: center; /* Alinear verticalmente */
+    margin-top: 50px; /* Espacio superior */
+    margin-bottom: 50px; /* Espacio inferior */
     color: #fff;
-    text-align: center;
-    background: transparent;
-    margin: 0 auto 20px; /* Ajuste de márgenes */
-    padding: 15px;
-    width: 100%;
-    border-radius: 10px;
-    max-width: 900px;
+    border-top: none; /* Elimina la línea de borde superior */
+    border-bottom: none; /* Elimina la línea de borde inferior */
 }
 
-.skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
+  /* Título */
+  .title-header {
+    font-size: 18px; /* Tamaño de la fuente */
+    font-weight: bold; /* Negrita */
+    text-align: center; /* Centrar */
+    margin-left: 80px; /* Espacio izquierdo */
+  }
+  
+  /* Navegación */
+  .nav-container {
+    display: flex; /* Elementos en fila */
+    list-style: none; /* Quitar viñetas */
+    margin: 0 40px 0 40px; /* Espacio entre elementos */
+    padding: 0; /* Eliminar padding */
+    justify-content: space-between; /* Distribuir elementos */
+  }
 
-.skill-card {
-    width: 200px;
-    max-height: 100%;
-    margin: 20px;
-    padding: 20px;
-    text-align: center;
-    background-color: #333;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.skill-card:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-}
-
-.skill-card img {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 10px;
-}
-
-.skill-card h3 {
+  .ul-nav-header{
+    display: flex; /* Elementos en fila */
+    list-style: none; /* Quitar viñetas */
+    margin: 0; /* Eliminar margenes */
+    padding: 0; /* Eliminar padding */
+    justify-content: space-between; /* Distribuir elementos */
+  }
+  
+  .nav-header li {
+    margin-right: 20px; /* Espacio entre elementos */
+  }
+  
+  .li-header-item {
+    margin-right: 20px;
+  }
+  
+  .li-header-item a {
+    text-decoration: none; /* Eliminar subrayado */
+    color: #f5f5f5; /* Color del texto */
     font-size: 18px;
+    font-weight: bold; /* Texto en negrita */
+    transition: font-size 0.4s ease; /* Agrega la transición aquí */
+  }
+  
+  /* Efecto al pasar el mouse sobre los enlaces */
+  .li-header-item a:hover {
+    color: #cd00d4;
+    transition: color 0.4s ease;
+    transition: font-size 0.4s ease; /* Agrega la transición aquí */
+    font-size: 1.4em; /* Cambia el tamaño de la letra al pasar el ratón */
+
+  }
+  
+  /* Presentación */
+  .presentation-card-container {
+    text-align: right; /* Alinear a la derecha */
+  }
+  
+  .presentation-card h2 {
+    text-align: center;
+    font-weight: bold; /* Negrita */
+    margin-bottom: 5px; /* Espacio entre títulos */
+  }
+
+  .presentation-card p {
+    text-align: center;
+    font-weight: bold; /* Negrita */
+    margin-bottom: 4px; /* Espacio entre títulos */
+  }
+
+  
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .header-box {
+      flex-direction: column; /* En dispositivos pequeños, elementos en columna */
+    }
+  
+    .title-header {
+      text-align: center; /* Centrar el título */
+    }
+  
+    .presentation-card-container {
+      text-align: center; /* Centrar la presentación */
+      margin-top: 20px; /* Espacio entre elementos */
+    }
+  }
+/*----------------------------------------------------- */
+
+body{
+    height: 100%;
     margin: 0;
 }
 
-.details {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-in-out;
+body::before{
+    content: "";
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* Establece un degradado lineal de arriba a abajo con dos colores */
+    background: linear-gradient(to bottom right, #23102b, #2c1336, #2f1747, #381b3f);
+    /* Aplica la animación al pseudo-elemento */
+    animation: brilloAnimacion 10s infinite; /* Ajusta la duración según sea necesario */
+    z-index: -999;
 }
 
-.expanded {
-    max-height: 100%;
-}
-
-#estudios {
-    color: #fff;
-    text-align: center;
-    border-radius: 10px;
-    background: transparent;
-    padding: 15px;
-    max-width: 100%;
-    margin-bottom: 20cm;
-}
-
-.study-item {
-    width: 300px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #333;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-}
-
-.study-item:hover {
-    transform: scale(1.1);
-}
-
-.study-item h3 {
-    font-size: 18px;
-    margin: 0;
-}
-
-.study-item p {
-    font-size: 14px;
-    margin: 5px 0;
-}
-
-.study-item img{
-    width: 90px;
-    height: 90px;
-}
-footer {
-    position: absolute;
-    bottom: 1;
-    width: 100%;
-    text-align: center;
-    padding: 20px;
-    background-color: #222;
-    color: #fff;
-    box-sizing: border-box;
-
-}
-
-#footer-handle img {
-    width: 120px;
-    height: 120px;
-}
-
-footer:hover {
-    max-height: 300px; /* Ajusta según la altura total del footer */
-}
-
-.footer-items-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.footer-item {
-    text-align: center;
-}
-
-.footer-item img {
-    width: 120px;
-    height: 120px;
-}
-
-.footer-item p {
-    margin: 0;
-    font-weight: bold;
-}
-
-.social-icons {
-    text-align: center;
-    margin-top: 15px;
-}
-
-.social-icons a {
-    margin: 0 10px;
-}
-
-.social-icons img {
-    width: 40px;
-    height: 40px;
-    transition: transform 0.5s ease;
-}
-
-.social-icons img:hover {
-    transform: scale(1.2);
-}
+ 
