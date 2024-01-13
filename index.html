@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">   
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" href="images/logos/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/images/logos/favicon.ico" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/animejs/3.2.0/anime.min.js"></script>
     <title>Brayan-Portafolio</title>
     <script>
     </script>
 </head>
-<body>
+<body class="body container">
     <header class="header-box">
         <div class="presentation-card-container">
             <div class ="presentation-card">
@@ -37,12 +39,15 @@
             </nav>
          </div>
     </header>
-    <div class="main-container">
-        <main class="main">
-            <article>
-                <section>
+        <main>
+            <article class="Unpocodemi">
+                <section class="un-poco-demi">
                         <h3>Un poco sobre mí</h3>
-                        <p>Soy una persona que solo desea una vida tranquila. Me encantan las compuadoras, las ciencias compuacionales y la ciencia en general.</p>
+                        <p>Soy una persona que solo desea una vida tranquila. 
+                           Desde siempre me han encantado las compuadoras, y posteriormente, todas 
+                           las ciencias compuacionales con lo que me llevaría a un gran gusto por la ciencia
+                           en general, por ello decidí estudiar para obtener el grado de ingenierío en ese ambito.
+                           </p>
                         <h3>Me encanta...</h3>
                             <ul class="love-container">
                                 <li class="love-list">Las Ciencias compuacionales</li>
@@ -57,13 +62,13 @@
                             </div>
                 </section>
             </article>
-            <article>
-                <section>
+            <article class="skills">
+                <section class="skills-container">
                     <h3>Skills</h3>
                     <p>
                         Como he mencionado anteriormente, me encantan las ciencias computacionales, además de la informatica y en general, la divulgación cientifica.
                     </p>
-                    <div class="skills-container">
+                    <div class="skills-container-item">
                         <div class="skill-card" onmouseover="expandCard(this)" onmouseout="collapseCard(this)">
                             <strong>Programación</strong>
                             <img src="images/Python-logo-notext.svg" alt="logo pythonlogo">
@@ -109,8 +114,8 @@
                     </div>
                 </section>
             </article>
-            <article>
-                <section>
+            <article class="estudios-art">
+                <section class="estudios-sec-container">
                     <h2>Estudios</h2>
                         <div class="study-item">
                             <h3>Universidad Autónoma de Nayarit</h3>
@@ -123,7 +128,6 @@
                 </section>
             </article>
         </main>
-    </div>
     <footer class="foter">
             <div class="footer-items-container">
                 <div class="footer-item-marca">
@@ -137,8 +141,123 @@
             <a href="https://www.instagram.com/marstiggi/" target="_blank"><img src="assets/images/logos/iglogo.png" alt="Instagram"></a>
             <a href="https://wa.me/+523111632873" target="_blank"><img src="assets/images/logos/whatsapplogo.png" alt="whastapp"></a>
         </div>
-        <p>&copy; 2024 | Brayan Jesús Carrillo Jiménez.</p>
-        <p>|Todos los derechos reservados.</p>
+        <div class="copy">
+            <p class="p1">&copy; 2024 | Brayan Jesús Carrillo Jiménez.</p>
+            <p class="p2">|Todos los derechos reservados.|</p>
+        </div>
     </footer>
+    <script>
+        // Configuración de Particle.js
+        particlesJS('particles-container', {
+          particles: {
+            number: {
+              value: 80,
+              density: {
+                enable: true,
+                value_area: 800
+              }
+            },
+            color: {
+              value: "#ffffff"
+            },
+            shape: {
+              type: "circle",
+              stroke: {
+                width: 0,
+                color: "#000000"
+              },
+              polygon: {
+                nb_sides: 5
+              }
+            },
+            opacity: {
+              value: 0.5,
+              random: true,
+              anim: {
+                enable: true,
+                speed: 1,
+                opacity_min: 0.1,
+                sync: false
+              }
+            },
+            size: {
+              value: 3,
+              random: true,
+              anim: {
+                enable: true,
+                speed: 2,
+                size_min: 0.1,
+                sync: false
+              }
+            },
+            line_linked: {
+              enable_auto: true,
+              distance: 100,
+              color: "#ffffff",
+              opacity: 0.6,
+              width: 1,
+              condensed_mode: {
+                enable: false,
+                rotateX: 600,
+                rotateY: 600
+              }
+            },
+            move: {
+              enable: true,
+              speed: 1,
+              direction: "none",
+              random: false,
+              straight: false,
+              out_mode: "out",
+              bounce: false,
+              attract: {
+                enable: false,
+                rotateX: 600,
+                rotateY: 1200
+              }
+            }
+          },
+          interactivity: {
+            detect_on: "canvas",
+            events: {
+              onhover: {
+                enable: true,
+                mode: "repulse"
+              },
+              onclick: {
+                enable: true,
+                mode: "push"
+              },
+              resize: true
+            },
+            modes: {
+              grab: {
+                distance: 400,
+                line_linked: {
+                  opacity: 1
+                }
+              },
+              bubble: {
+                distance: 400,
+                size: 40,
+                duration: 2,
+                opacity: 8,
+                speed: 3
+              },
+              repulse: {
+                distance: 200,
+                duration: 0.4
+              },
+              push: {
+                particles_nb: 4
+              },
+              remove: {
+                particles_nb: 2
+              }
+            }
+          },
+          retina_detect: true
+        });
+      </script>
 </body>
 </html>

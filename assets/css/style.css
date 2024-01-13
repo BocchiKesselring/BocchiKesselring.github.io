@@ -9,41 +9,57 @@
       filter: brightness(0.8);
     }
   }
-
 * {
     font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3)
 }
 
-html{
-
-    height: 0;
-    margin: 0;
-    padding: 0;
-}
-
-body, ul, li, h2, h1, p, img{
+body, ul, li, h2, h1, p, img, footer, header{
   padding: 0;
   margin: 0;
+}
+
+.body{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  min-height: 100vh;
+}
+
+.body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* Degradado de negro a gris oscuro */
+  background: linear-gradient(to bottom, #000000, #333333);
+  /* Agregar patrón de líneas */
+  background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05) 10px, transparent 10px, transparent 20px);
+  /* Superponer degradado rojo */
+  background-blend-mode: overlay;
+  /* Fondo rojo más oscuro */
+  background: linear-gradient(to bottom right, #1a0a0a, #1f0c0c, #230d0d, #350d0d);
+  /* Animación */
+  z-index: -1;
 }
 /*---------------------------------------------------------- Header */
 /* Estilos generales del encabezado */
 /* Encabezado */
 .header-box {
-  background-color: rgba(49, 49, 49, 0.623);
+  background-color: #494949a1; /* Negro */
   padding: 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  color: #fff;
+  color: #ccc; /* Gris claro para el texto */
   border-bottom: 2px solid #DC143C;
+  transition: background-color 0.5s ease;
 }
 
-/* Título */
-.title-header {
-  font-size: 18px;
-  font-weight: bold;
-  text-align: center;
-  margin-left: 80px;
+.header-box:hover {
+  background-color: #130606a2; /* Cambia el color al pasar el mouse */
 }
 
 /* Navegación */
@@ -52,7 +68,8 @@ body, ul, li, h2, h1, p, img{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+
 }
 
 .ul-nav-header {
@@ -116,6 +133,7 @@ body, ul, li, h2, h1, p, img{
   height: 80px;
   border-radius: 50px;
   flex-grow: 1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 /* Responsive styles */
@@ -160,43 +178,37 @@ body, ul, li, h2, h1, p, img{
   }
 }
 /*----------------------------------------------------- */
-
-body{
-    height: 100%;
-    margin: 0;
+/*main--------------------------------------------------*/
+main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-body::before{
-    content: "";
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    /* Establece un degradado lineal de arriba a abajo con dos colores */
-    background: linear-gradient(to bottom right, #301313, #361111, #3a0f0f, #5a0f0f);
-    /* Aplica la animación al pseudo-elemento */
-    animation: brilloAnimacion 10s infinite; /* Ajusta la duración según sea necesario */
-    z-index: -999;
+article {
+  padding: 10px;
+  margin-bottom: 20px;
 }
 
-/* Main container */
 
 
 /*Aqui está el pie de página---------------------------------------------------------------*/
 
 .foter {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  color: aliceblue;
-  padding: 20px;
-  background-color: rgba(49, 49, 49, 0.623);
-  border-top: 2px solid #DC143C; /* Borde superior */
+display: flex;
+flex-direction: column;
+background-color: #494949a1; /* Negro */
+border-top: 2px solid #DC143C;
+color: #DDD;
+bottom: 0;
+padding: 20px;
+margin-top: auto; /* Empujar el pie de página hacia abajo */
+
+
 }
 
 .footer-items-container {
+  display: flex;
   justify-content: space-between; /* Distribuye los elementos a izquierda y derecha */
   margin-bottom: 20px;
 }
@@ -219,6 +231,7 @@ body::before{
   height: auto;
   max-width: 150px; /* Ajusta el ancho máximo de la imagen de la marca */
 }
+
 .footer-item img {
   width: 100%;
   height: auto;
@@ -226,7 +239,6 @@ body::before{
   height: 120px;
   object-fit: cover; /* Ajusta la imagen al contenedor */
 }
-
 
 .social-icons {
   display: flex;
@@ -247,6 +259,14 @@ body::before{
 
 .social-icons a {
   margin: 0 5px;
+}
+
+.copy{
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 @media (max-width: 768px) {
@@ -270,24 +290,12 @@ body::before{
   .social-icons {
     margin-bottom: 10px;
   }
-}
-@media (max-width: 768px) {
-  .footer-items-container {
-    flex-direction: column; /* Elementos en columna en pantallas pequeñas */
-  }
 
-  .footer-item {
-    margin: 10px 0;
+  .copy{
     text-align: center;
-  }
-
-  .footer-item-marca {
-    margin-bottom: 10px; /* Separación con los iconos sociales */
-  }
-
-  .social-icons {
-    margin-bottom: 10px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
   }
 }
-
- 
