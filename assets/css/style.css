@@ -62,6 +62,8 @@ transition: background-color 0.5s ease;
 background-color: #130606a2; /* Cambia el color al pasar el mouse */
 }
 
+
+
 /* Navegación */
 .nav-container {
 margin-top: 10px;
@@ -95,7 +97,7 @@ font-size: 18px;
 margin: 0 15px 0 15px;
 transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 border-radius: 5px;
-padding: 10px;
+padding: 8px 15px; /* Ajusta el relleno (padding) según sea necesario */
 }
 
 /* Efectos al pasar el mouse sobre los enlaces */
@@ -194,6 +196,7 @@ main {
 width: 100%;
 max-width: 1200px;
 margin: 0 auto;
+color: #DDD;
 }
 
 article {
