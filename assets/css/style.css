@@ -9,9 +9,10 @@
     filter: brightness(0.8);
   }
 }
+
 * {
-  font-family: Arial, Helvetica, sans-serif;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3)
+  font-family: 'Roboto', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3)
 }
 
 body, ul, li, h2, h1, p, img, footer, header{
@@ -44,6 +45,35 @@ background: linear-gradient(to bottom right, #1a0a0a, #1f0c0c, #230d0d, #350d0d)
 /* Animación */
 z-index: -1;
 }
+
+.Hitori {
+  font-family: fantasy;
+  font-size: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 6vh;
+  background: linear-gradient(45deg, #ff4500, #ff1493, #00bfff, #8a2be2);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradientAnimation 5s infinite linear;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+@keyframes gradientAnimation {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
 /*---------------------------------------------------------- Header */
 /* Estilos generales del encabezado */
 /* Encabezado */
@@ -56,6 +86,7 @@ align-items: center;
 color: #ccc; /* Gris claro para el texto */
 border-bottom: 2px solid #DC143C;
 transition: background-color 0.5s ease;
+margin-bottom: 40px;
 }
 
 .header-box:hover {
@@ -185,147 +216,255 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   height: 60px;
 }
 }
-@media (max-width: 340px) {
+@media (max-width: 300px) {
   .ul-nav-header {
     flex-direction: column;
   }
 }
 /*----------------------------------------------------- */
 /*main--------------------------------------------------*/
+h2, h3 {
+  color: #DC143C;
+}
+
+p {
+  line-height: 1.6;
+}
+
 main {
-width: 100%;
-max-width: 1200px;
-margin: 0 auto;
-color: #DDD;
+  padding: 20px;
+  max-width: 800px; /* Puedes ajustar el ancho máximo según tus preferencias */
+  margin: 0 auto; /* Centra el contenido horizontalmente */
+  text-align: center;
+}
+
+main img{
+  width: 100px;
+  height: 100px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 article {
-padding: 10px;
-margin-bottom: 20px;
+  background: #1a1c1d;
+  color: #fff;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 2px solid #DC143C;
 }
 
-
-
-/*Aqui está el pie de página---------------------------------------------------------------*/
-
-.foter {
-display: flex;
-flex-direction: column;
-background-color: #494949a1; /* Negro */
-border-top: 2px solid #DC143C;
-color: #DDD;
-bottom: 0;
-padding: 20px;
-margin-top: auto; /* Empujar el pie de página hacia abajo */
-transition: background-color 0.5s ease;
+.skills {
+  background: linear-gradient(to bottom right, #1a0a0a, #1f0c0c, #230d0d);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+  background: #1a1c1d;
 
 }
 
-.foter:hover {
-  background-color: #130606a2; /* Cambia el color al pasar el mouse */
-  }
+.img_uan{
 
-.footer-items-container {
-display: flex;
-justify-content: space-between; /* Distribuye los elementos a izquierda y derecha */
-margin-bottom: 20px;
+  width: 170px;
+  height: 170px;
+  
 }
 
-.footer-item-marca {
-flex-basis: 100%; /* Ocupa todo el ancho disponible en pantallas pequeñas */
-margin: 10px;
-text-align: center;
-order: 1; /* Posiciona la marca por encima de los animes */
+.skills-container {
+  color: #DDD;
 }
 
-.footer-item {
-flex-basis: 30%; /* Ancho inicial de cada elemento */
-margin: 10px;
-text-align: center;
+.skills h3 {
+  margin-bottom: 20px;
 }
 
-.footer-item-marca img {
-width: 100%;
-height: auto;
-max-width: 150px; /* Ajusta el ancho máximo de la imagen de la marca */
+.skills p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
 }
 
-.footer-item img {
-width: 100%;
-height: auto;
-max-width: 120px; /* Limita el ancho máximo de las imágenes de anime */
-height: 120px;
-object-fit: cover; /* Ajusta la imagen al contenedor */
+.skills-container-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-.social-icons {
-display: flex;
-justify-content: center;
-}
-
-.social-icons img {
-height: 40px;
-width: 40px;
-margin: 8px;
-transition: transform 0.3s ease;
-filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.6)); /* Aplica sombra solo al contenido visible */
-
-}
-
-.social-icons img:hover {
-transform: scale(1.3);
-transition: transform 0.3s ease;
-}
-
-.social-icons a {
-margin: 0 5px;
-}
-
-.copy{
-text-align: center;
-justify-content: center;
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-}
-
-@media (max-width: 768px) {
-.footer-items-container {
-  flex-direction: column; /* Elementos en columna en pantallas pequeñas */
-}
-
-.footer-item {
-  margin: 10px 0;
+.skill-card {
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-basis: calc(33.33% - 20px);
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 2px solid #DDD;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
 }
 
-.anime-items-container {
-  margin-right: 0; /* Elimina la separación con la marca en pantallas pequeñas */
-}
-
-.footer-item-marca {
-  margin-bottom: 10px; /* Separación con los iconos sociales */
-}
-
-.social-icons {
+.skill-card img {
+  width: 80px; /* Ajusta el tamaño según sea necesario */
   margin-bottom: 10px;
 }
 
-.copy{
+.details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 14px;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.9);
+  color: #FFF;
+  transform: scale(0.8);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  padding: 15px;
+}
+
+.skill-card:hover .details {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@media screen and (max-width: 768px) {
+  .skills-container-item {
+    flex-direction: column;
+  }
+
+  .skill-card {
+    flex-basis: calc(100% - 20px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  article {
+      padding: 15px;
+  }
+}
+/* Aquí empieza el footer ----------------------------------------------*/
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(73, 73, 73, 0.65);
+  border-top: 2px solid #DC143C;
+  color: #DDD;
+  bottom: 0;
+  padding: 20px;
+  margin-top: auto; /* Empujar el pie de página hacia abajo */
+  transition: background-color 0.5s ease;
+  
+  }
+  
+  .footer:hover {
+    background-color: #130606a2; /* Cambia el color al pasar el mouse */
+    }
+  
+  .footer-items-container {
+  display: flex;
+  justify-content: space-between; /* Distribuye los elementos a izquierda y derecha */
+  margin-bottom: 20px;
+  }
+  
+  .footer-item-marca {
+  flex-basis: 100%; /* Ocupa todo el ancho disponible en pantallas pequeñas */
+  margin: 10px;
+  text-align: center;
+  order: 1; /* Posiciona la marca por encima de los animes */
+  }
+  
+  .footer-item {
+  flex-basis: 30%; /* Ancho inicial de cada elemento */
+  margin: 10px;
+  text-align: center;
+  }
+  
+  .footer-item-marca img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  max-width: 220px; /* Ajusta el ancho máximo de la imagen de la marca */
+  }
+  
+  .footer-item img {
+  width: 100%;
+  height: auto;
+  max-width: 120px; /* Limita el ancho máximo de las imágenes de anime */
+  height: 120px;
+  object-fit: cover; /* Ajusta la imagen al contenedor */
+  }
+  
+  .social-icons {
+  display: flex;
+  justify-content: center;
+  }
+  
+  .social-icons img {
+  height: 40px;
+  width: 40px;
+  margin: 8px;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.6)); /* Aplica sombra solo al contenido visible */
+  
+  }
+  
+  .social-icons img:hover {
+  transform: scale(1.3);
+  transition: transform 0.3s ease;
+  }
+  
+  .social-icons a {
+  margin: 0 5px;
+  }
+  
+  .copy{
   text-align: center;
   justify-content: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
-}
-
-@media (max-width: 340px) {
-  .social-icons{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-items: center;
-    justify-content: center;
   }
-}
-}
+  
+  @media (max-width: 768px) {
+  .footer-items-container {
+    flex-direction: column; /* Elementos en columna en pantallas pequeñas */
+  }
+  
+  .footer-item {
+    margin: 10px 0;
+    text-align: center;
+  }
+  
+  .anime-items-container {
+    margin-right: 0; /* Elimina la separación con la marca en pantallas pequeñas */
+  }
+  
+  .footer-item-marca {
+    margin-bottom: 10px; /* Separación con los iconos sociales */
+  }
+  
+  .social-icons {
+    margin-bottom: 10px;
+  }
+  
+  .copy{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  
+  @media (max-width: 340px) {
+    .social-icons{
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-items: center;
+      justify-content: center;
+    }
+  }
+  }

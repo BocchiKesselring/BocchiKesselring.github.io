@@ -7,6 +7,7 @@
     <link rel="icon" href="assets/images/logos/favicon.ico" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://cdn.jsdelivr.net/animejs/3.2.0/anime.min.js"></script>
+    <script src=""></script>
     <title>Brayan-Portafolio</title>
     <script>
     </script>
@@ -41,25 +42,15 @@
     </header>
         <main>
             <article class="Unpocodemi">
-                <section class="un-poco-demi">
+                <section class="un-poco-demi-container">
+                    <div class="un-poco-demi">
                         <h3>Un poco sobre mí</h3>
                         <p>Soy una persona que solo desea una vida tranquila. 
                            Desde siempre me han encantado las compuadoras, y posteriormente, todas 
                            las ciencias compuacionales con lo que me llevaría a un gran gusto por la ciencia
                            en general, por ello decidí estudiar para obtener el grado de ingenierío en ese ambito.
-                           </p>
-                        <h3>Me encanta...</h3>
-                            <ul class="love-container">
-                                <li class="love-list">Las Ciencias compuacionales</li>
-                                <li class="love-list">El anime</li>
-                            </ul>
-                            <div class="likes-container">
-                                <p>Aquí abajo pongo algunas obras que recomiendo y hablan un poco de mí :D. 👇</p>
-                                <a href="https://es.wikipedia.org/wiki/Kaguya-sama:_Love_Is_War" target="_blank"><img src="images/imghayasaka.jpg" alt="imghayasaka"></a>
-                                <a href="https://es.wikipedia.org/wiki/Dorohedoro" target="_blank"><img src="images/imgdorohedoro.jpg" alt="imgdorohedoro"></a>
-                                <a href="https://es.wikipedia.org/wiki/Death_Note" target="_blank"><img src="images/imgdeathnote.jpg" alt="imgdeathnote"></a>
-                                <a href="https://es.wikipedia.org/wiki/Bocchi_the_Rock!" target="_blank"><img src="images/imgbocchitrock.jpg" alt="Imagen de inicio"></a>
-                            </div>
+                        </p>
+                    </div>
                 </section>
             </article>
             <article class="skills">
@@ -69,9 +60,9 @@
                         Como he mencionado anteriormente, me encantan las ciencias computacionales, además de la informatica y en general, la divulgación cientifica.
                     </p>
                     <div class="skills-container-item">
-                        <div class="skill-card" onmouseover="expandCard(this)" onmouseout="collapseCard(this)">
+                        <div class="skill-card">
                             <strong>Programación</strong>
-                            <img src="images/Python-logo-notext.svg" alt="logo pythonlogo">
+                            <img src="assets/images/pythonlogo.svg" alt="logo pythonlogo">
                             <strong>Desarrollo Python</strong>
                             <div class="details">
                                 <p>Tengo experiencia en programación desde mis estudios de bachiller.
@@ -80,25 +71,25 @@
                                 </p>
                             </div>    
                         </div>
-                        <div class="skill-card" onmouseover="expandCard(this)" onmouseout="collapseCard(this)">
+                        <div class="skill-card">
                             <strong>Desarrollo Web</strong>
-                            <img src="images/htmllogo.png" alt="logo html">
+                            <img src="assets/images/htmllogo.png" alt="logo html">
                             <strong>HTML5,CSS3,JS</strong>
                             <div class="details">
                                 <p>Tengo experiencia escribiendo en HTML, CSS3, y JS; en general, front-end</p>
                             </div>    
                         </div>
-                        <div class="skill-card" onmouseover="expandCard(this)" onmouseout="collapseCard(this)">
+                        <div class="skill-card">
                             <strong>Internet de las cosas</strong>
-                            <img src="images/Arduino_Logo.svg" alt="Arduino_Logo">
+                            <img src="assets/images/Arduino_Logo.svg" alt="Arduino_Logo">
                             <strong>Arduino, NODEMCU, Raspberry</strong>
                             <div class="details">
                                 <p>He desarrolado diversos proyectos de IoT y de software usado placas de desarrollo de Raspberry, Arduino y Nodemcu</p>
                             </div>    
                         </div>
-                        <div class="skill-card" onmouseover="expandCard(this)" onmouseout="collapseCard(this)">
+                        <div class="skill-card">
                             <strong>Machine Learning</strong>
-                            <img src="images/Scikit_learn_logo_small.svg" alt="Skitlearlogo">
+                            <img src="assets/images/Scikit_learn_logo_small.svg" alt="Skitlearlogo">
                             <strong>Skitlearn</strong>
                             <div class="details">
                                 <p>Tengo los conocimientos basicos en analisis de datos así como en el aprendizaje automático y expenriencia en libreías como Skitlear y Tenserflow</p>
@@ -106,7 +97,7 @@
                         </div>
                         <div class="skill-card" onmouseover="expandCard(this)" onmouseout="collapseCard(this)">
                             <strong>Microsoft Office Suite</strong>
-                            <img src="images/Officelogo.svg" alt="Officelogo">
+                            <img src="assets/images/Officelogo.svg" alt="Officelogo">
                             <div class="details">
                                 <p>Tengo experiencia usando Word y Exel</p>
                             </div>    
@@ -114,24 +105,26 @@
                     </div>
                 </section>
             </article>
-            <article class="estudios-art">
-                <section class="estudios-sec-container">
-                    <h2>Estudios</h2>
-                        <div class="study-item">
-                            <h3>Universidad Autónoma de Nayarit</h3>
-                                <p>Ingeniería en Control y Computación</p>
-                                <p>2018-2023</p>
-                            <div>
-                                <img src="images/Logo_de_la_UAN.svg">
-                            </div>
-                         </div>
-                </section>
-            </article>
+            <article class="study-container">
+            <section class="estudios-sec-container">
+                <h2>Estudios</h2>
+                    <div class="study-item">
+                        <h3>Universidad Autónoma de Nayarit</h3>
+                            <p>Ingeniería en Control y Computación</p>
+                            <p>2018-2023</p>
+                        <div>
+                            <img src="assets/images/Logo_de_la_UAN.svg" class="img_uan">
+                        </div>
+                     </div>
+            </section>
+        </article>
         </main>
-    <footer class="foter">
+    <footer class="footer">
+        <div class="particles-container"></div>
             <div class="footer-items-container">
                 <div class="footer-item-marca">
-                    <p>Made by:</p>
+                    <p>Made by: </p>
+                    <p class="Hitori">Proyect Irene</p>
                     <img src="assets/images/marca.jpg" alt="Marca">
                 </div>
             </div>
