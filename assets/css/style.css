@@ -20,6 +20,15 @@ padding: 0;
 margin: 0;
 }
 
+.logo_uan img{
+  transition: transform 0.3s ease;
+}
+
+.logo_uan img:hover{
+  transform: scale(1.3);
+  transition: transform 0.3s ease;
+}
+
 .body{
 display: flex;
 flex-direction: column;
@@ -223,7 +232,7 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 /*----------------------------------------------------- */
 /*main--------------------------------------------------*/
-h2, h3 {
+h2, h3, h4 {
   color: #DC143C;
 }
 
