@@ -56,3 +56,28 @@
         z-index: -1;
         }
         
+          /* Para navegadores webkit (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 12px; /* ancho del scrollbar */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #808080; /* color del thumb (barra) */
+    border-radius: 6px; /* bordes redondeados del thumb */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #f0f0f0; /* color de fondo del scrollbar */
+  }
+  
+  /* Para Firefox */
+  /* Nota: Estilos para el scrollbar en Firefox son limitados */
+  /* Aquí solo se cambia el color del thumb */
+  /* Otras propiedades pueden no ser compatibles en Firefox */
+  html {
+    scrollbar-color: #808080 #f0f0f0;
+  }
+  
+  body {
+    scrollbar-width: thin; /* ancho del scrollbar */
+  }
