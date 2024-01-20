@@ -1,0 +1,145 @@
+
+.header-box {
+    background-color: #494949a1; /* Negro */
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #ccc; /* Gris claro para el texto */
+    border-bottom: 2px solid #DC143C;
+    transition: background-color 0.5s ease;
+    margin-bottom: 40px;
+    }
+    
+    .header-box:hover {
+    background-color: #130606a2; /* Cambia el color al pasar el mouse */
+    }
+    
+    
+    
+    /* Navegación */
+    .nav-container {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+    }
+    
+    .ul-nav-header {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    }
+    
+    .li-header-item {
+    margin-right: 20px;
+    }
+    
+    .li-header-item:last-child {
+    margin-right: 0;
+    }
+    
+    .li-header-item a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    margin: 0 15px 0 15px;
+    transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 5px;
+    padding: 8px 15px; /* Ajusta el relleno (padding) según sea necesario */
+    }
+    
+    /* Efectos al pasar el mouse sobre los enlaces */
+    .li-header-item a:hover {
+      color: #DC143C;
+      background-color: #FFF; /* Cambia el fondo al hover */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Añade una sombra al hover */
+    }
+    
+    /* Estilos de la carta de presentación */
+    .presentation-card-container {
+    max-width: 50%;
+    }
+    
+    .presentation-card {
+    align-items: center;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    }
+    
+    .presentation-card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+    flex-grow: 1;
+    }
+    
+    .presentation-card p {
+    text-align: center;
+    font-size: 16px;
+    }
+    
+    .presentation-card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    flex-grow: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    }
+    
+    /* Responsive styles */
+    @media (max-width: 768px) {
+    .header-box {
+      flex-direction: column;
+      padding: 10px;
+    }
+    
+    .nav-container {
+      margin-top: 15px;
+    }
+    
+    .presentation-card-container {
+      text-align: center;
+      margin-top: 10px;
+      max-width: 100%;
+    }
+    
+    .presentation-card img {
+      margin-bottom: 5px;
+    }
+    
+    .ul-nav-header {
+      flex-direction: row;
+    }
+    
+    .li-header-item {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+    
+    .li-header-item a {
+      font-size: 16px;
+      padding: 1px;
+    }
+    }
+    
+    @media (max-width: 576px) {
+    .presentation-card img {
+      width: 60px;
+      height: 60px;
+    }
+    }
+    @media (max-width: 300px) {
+      .ul-nav-header {
+        flex-direction: column;
+      }
+    }

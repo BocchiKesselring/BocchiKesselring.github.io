@@ -1,0 +1,58 @@
+
+* {
+    font-family: 'Roboto', sans-serif;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3)
+  }
+  
+  body, ul, li, h2, h1, p, img, footer, header{
+  padding: 0;
+  margin: 0;
+  }
+  
+  h2, h3, h4 {
+    color: #DC143C;
+  }
+
+  p {
+    line-height: 1.6;
+  }
+  
+  
+  .body{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    min-height: 100vh;
+    }
+
+    @keyframes brilloAnimacion {
+        0% {
+          filter: brightness(0.8);
+        }
+        50% {
+          filter: brightness(1.5);
+        }
+        100% {
+          filter: brightness(0.8);
+        }
+      }
+      
+      .body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        /* Degradado de negro a gris oscuro */
+        background: linear-gradient(to bottom, #000000, #333333);
+        /* Agregar patrón de líneas */
+        background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05) 10px, transparent 10px, transparent 20px);
+        /* Superponer degradado rojo */
+        background-blend-mode: overlay;
+        /* Fondo rojo más oscuro */
+        background: linear-gradient(to bottom right, #1a0a0a, #1f0c0c, #230d0d, #350d0d);
+        /* Animación */
+        z-index: -1;
+        }
+        
