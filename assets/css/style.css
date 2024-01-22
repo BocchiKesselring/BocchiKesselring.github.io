@@ -1,42 +1,39 @@
-@keyframes brilloAnimacion {
+/*Definición de animaciones*/
+
+
+@keyframes gradientAnimation {
   0% {
-    filter: brightness(0.8);
+      background-position: 0% 50%;
   }
   50% {
-    filter: brightness(1.5);
+      background-position: 100% 50%;
   }
   100% {
-    filter: brightness(0.8);
+      background-position: 0% 50%;
   }
 }
 
+
+
+
 * {
-  font-family: 'Roboto', sans-serif;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3)
+  font-family: 'Roboto', sans-serif;                    /* Atributos generales*/
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3)
 }
 
-body, ul, li, h2, h1, p, img, footer, header{
+body, ul, li, h2, h1, p, img, footer, header{           /*RESET CSS. Elimina márgenes predeterminados de algunos navegadprees*/
 padding: 0;
 margin: 0;
 }
 
-.logo_uan img{
-  transition: transform 0.3s ease;
-}
-
-.logo_uan img:hover{
-  transform: scale(1.3);
-  transition: transform 0.3s ease;
-}
-
-.body{
+.body{                    /*Atributos de acople generales para la etiqueta body*/
 display: flex;
-flex-direction: column;
+flex-direction: column;                
 justify-items: center;
 min-height: 100vh;
 }
 
-.body::before {
+.body::before {         /*Agrega una capa antes sin afectar el contenido original, en este caso, un fondo con gradiente*/
 content: "";
 position: fixed;
 top: 0;
@@ -55,37 +52,10 @@ background: linear-gradient(to bottom right, #1a0a0a, #1f0c0c, #230d0d, #350d0d)
 z-index: -1;
 }
 
-.Hitori {
-  font-family: fantasy;
-  font-size: 35px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 6vh;
-  background: linear-gradient(45deg, #ff4500, #ff1493, #00bfff, #8a2be2);
-  background-size: 400% 400%;
-  -webkit-background-clip: text;
-  color: transparent;
-  animation: gradientAnimation 5s infinite linear;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-@keyframes gradientAnimation {
-  0% {
-      background-position: 0% 50%;
-  }
-  50% {
-      background-position: 100% 50%;
-  }
-  100% {
-      background-position: 0% 50%;
-  }
-}
-
 /*---------------------------------------------------------- Header */
 /* Estilos generales del encabezado */
 /* Encabezado */
+
 .header-box {
 background-color: #494949a1; /* Negro */
 padding: 20px;
@@ -101,8 +71,6 @@ margin-bottom: 40px;
 .header-box:hover {
 background-color: #130606a2; /* Cambia el color al pasar el mouse */
 }
-
-
 
 /* Navegación */
 .nav-container {
@@ -219,14 +187,16 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 374px) {
 .presentation-card img {
   width: 60px;
   height: 60px;
 }
 }
-@media (max-width: 300px) {
+@media (max-width: 374px) {
   .ul-nav-header {
+    text-align: center;
+    justify-content: center;
     flex-direction: column;
   }
 }
@@ -334,6 +304,16 @@ article {
   padding: 15px;
 }
 
+.logo_uan img{
+  transition: transform 0.3s ease;
+}
+
+.logo_uan img:hover{
+  transform: scale(1.3);
+  transition: transform 0.3s ease;
+}
+
+
 .skill-card:hover .details {
   opacity: 1;
   transform: scale(1);
@@ -437,6 +417,22 @@ article {
   flex-wrap: wrap;
   }
   
+  .Hitori {
+    font-family: fantasy;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 6vh;
+    background: linear-gradient(45deg, #ff4500, #ff1493, #00bfff, #8a2be2);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradientAnimation 5s infinite linear;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
   @media (max-width: 768px) {
   .footer-items-container {
     flex-direction: column; /* Elementos en columna en pantallas pequeñas */
@@ -466,6 +462,7 @@ article {
     flex-direction: column;
     flex-wrap: wrap;
   }
+
   
   @media (max-width: 340px) {
     .social-icons{
