@@ -1,149 +1,127 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+  <head> 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" href="assets/images/logos/favicon.ico" type="image/x-icon">
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/animejs/3.2.0/anime.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio de Brayan">
+    <meta name="keywords" content="Portafolio, Brayan, Ingeniería">
+    <meta name="author" content="Brayan Jesús Carrillo Jiménez">
+
+
     <title>Inicio</title>
-</head>
-<body class="body">
-    <header class="header-box">
-        <div class="presentation-card-container">
-            <div class ="presentation-card">
-                <img src="assets/images/profile-picture.jpg">
-                <h2>Brayan Jesús Carrillo Jiménez</h2>
-                <p>Ingeniero en Control y Computación</p>
-            </div>
-        </div>    
-        <div class="nav-container">
-            <nav class="nav-header">
-                <ul class="ul-nav-header">
-                    <li class="li-header-item">
-                        <a href="index.html">Inicio</a>
-                    </li>
-                    <li class="li-header-item">
-                        <a href="pages/curriculum.html">Curriculum</a>
-                    </li>
-                    <li class="li-header-item">
-                        <a href="pages/portafolio.html">Portafolio</a>
-                    </li>
-                    <li class="li-header-item">
-                        <a href="pages/contact.html">Contacto</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/curriculum.css">
+
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+  </head>
+  <body>
+    <header>
+      <div class="presentation-container">
+        <h1>Inicio.</h1>
+        <img src="assets/images/pic-profile.png" alt="foto-perfil">
+        <h2>Brayan Jesús Carrillo Jiménez.</h2>
+        <h4>Ingeniero En Control y Computación.</h4>
+      </div>
+      <div class="nav-contaier">
+        <nav>
+          <ul>
+            <li>
+              <a href="index.html">
+                Inicio
+              </a>
+            </li>
+            <li>
+              <a href="assets/pages/curriculum.html">
+                Curriculum
+              </a>
+            </li>
+            <li>
+              <a href="assets/pages/Portafolio.html">
+                Portafolio
+              </a>
+            </li>
+            <li>
+              <a href="assets/pages/contacto.html">
+                Contacto
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
-        <main>
-            <article class="Unpocodemi">
-                <section class="un-poco-demi-container">
-                    <div class="un-poco-demi">
-                        <h3>Un poco sobre mí</h3>
-                        <p>Soy una persona que solo desea una vida tranquila. 
-                           Desde siempre me han encantado las compuadoras, y posteriormente, todas 
-                           las ciencias compuacionales con lo que me llevaría a un gran gusto por la ciencia
-                           en general, por ello decidí estudiar para obtener el grado de ingenierío en ese ambito.
-                        </p>
-                    </div>
-                </section>
-            </article>
-            <article class="skills">
-                <section class="skills-container">
-                    <h3>Skills</h3>
-                    <p>
-                        Como he mencionado anteriormente, me encantan las ciencias computacionales, además de la informatica y en general, la divulgación cientifica.
-                    </p>
-                    <div class="skills-container-item">
-                        <div class="skill-card">
-                            <strong>Programación</strong>
-                            <img src="assets/images/pythonlogo.svg" alt="logo pythonlogo">
-                            <strong>Desarrollo Python</strong>
-                            <div class="details">
-                                <p>Tengo experiencia en programación desde mis estudios de bachiller.
-                                    Durante la carrera llevé varias áreas de la programación y el Desarrollo de software,
-                                    pero estoy más especializado en Python.
-                                </p>
-                            </div>    
-                        </div>
-                        <div class="skill-card">
-                            <strong>Desarrollo Web</strong>
-                            <img src="assets/images/htmllogo.png" alt="logo html">
-                            <strong>HTML5,CSS3,JS</strong>
-                            <div class="details">
-                                <p>Tengo experiencia escribiendo en HTML, CSS3, y JS; en general, front-end</p>
-                            </div>    
-                        </div>
-                        <div class="skill-card">
-                            <strong>Internet de las cosas</strong>
-                            <img src="assets/images/Arduino_Logo.svg" alt="Arduino_Logo">
-                            <strong>Arduino, NODEMCU, Raspberry</strong>
-                            <div class="details">
-                                <p>He desarrolado diversos proyectos de IoT y de software usado placas de desarrollo de Raspberry, Arduino y Nodemcu</p>
-                            </div>    
-                        </div>
-                        <div class="skill-card">
-                            <strong>Machine Learning</strong>
-                            <img src="assets/images/Scikit_learn_logo_small.svg" alt="Skitlearlogo">
-                            <strong>Skitlearn</strong>
-                            <div class="details">
-                                <p>Tengo los conocimientos basicos en analisis de datos así como en el aprendizaje automático y expenriencia en libreías como Skitlear y Tenserflow</p>
-                            </div>    
-                        </div>
-                        <div class="skill-card" onmouseover="expandCard(this)" onmouseout="collapseCard(this)">
-                            <strong>Microsoft Office Suite</strong>
-                            <img src="assets/images/Officelogo.svg" alt="Officelogo">
-                            <div class="details">
-                                <p>Tengo experiencia usando Word y Exel.</p>
-                            </div>    
-                        </div>
-                    </div>
-                </section>
-            </article>
-            <article class="study-container">
-            <section class="estudios-sec-container">
-                <h2>Estudios.</h2>
-                    <div class="study-item">
-                        <h3>Universidad Autónoma de Nayarit.</h3>
-                            <p>Ingeniería en Control y Computación.</p>
-                            <p>"2018-2023"</p>
-                            <h4>Título.</h4>
-                        <div class="logo_uan">
-                            <a href="https://www.uan.edu.mx/" target="_blank"><img src="assets/images/Logo_de_la_UAN.svg" class="img_uan"></a>
-                        </div>
-                     </div>
-            </section>
-        </article>
-        </main>
-    <footer class="footer">
-        <div class="particles-container"></div>
-            <div class="footer-items-container">
-                <div class="footer-item-marca">
-                    <p>Made by: </p>
-                    <p class="Hitori">Proyecto Irene.</p>
-                    <img src="assets/images/marca.jpg" alt="Marca">
-                </div>
-            </div>
-        <div class="social-icons">
-            <div class="social-icons-container">
-                <a href="https://github.com/BocchiKesselring" target="_blank"><img src="assets/images/logos/githublogo.png" alt="GitHub"></a>
-            </div>
-            <div class="social-icons-container">
-                <a href="https://www.linkedin.com/in/brayan-jes%C3%BAs-carrillo-jim%C3%A9nez-373918265/" target="_blank"><img src="assets/images/logos/likedinlogo.png" alt="LinkedIn"></a>
-            </div>
-            <div class="social-icons-container">
-                <a href="https://www.instagram.com/marstiggi/" target="_blank"><img src="assets/images/logos/iglogo.png" alt="Instagram"></a>
-            </div>
-            <div class="social-icons-container">    
-                <a href="https://wa.me/+525523150006" target="_blank"><img src="assets/images/logos/whatsapplogo.png" alt="whastapp"></a>
-            </div>
+    <main>
+      <section class="sobre-mi">
+        <h4>Sobre mí</h4>
+        <p>
+          Soy una persona a la cual le encanta las ciencias compuacionales. Actualmente soy Ingeniero en Control y Computación. Me especilizo los sistemas compuacionales.
+        </p>
+      </section>
+      <section class="Skills">
+        <h4>Skills</h4>
+        <div class="Skills-Card">
+          <h5>
+            Programación.
+          </h5>
+          <img src ="assets/images/python-logo.png" alt="Skillprograming-img">
         </div>
-        <div class="copy">
-            <p class="p1">&copy; 2024 | Brayan Jesús Carrillo Jiménez. </p>
-            <p class="p2"> |Todos los derechos reservados.|</p>
+        <div class="Skills-Card">
+          <h5>
+            Desarrollo Web.
+          </h5>
+          <img src ="assets/images/htmllogo.png" alt="Skillwebdev-img">
         </div>
+        <div class="Skills-Card">
+          <h5>
+            Internet de las Cosas(IoT).
+          </h5>
+          <img src ="assets/images/Arduino_Logo.svg" alt="Skillwebiot-img">
+        </div>
+        <div class="Skills-Card">
+          <h5>
+            Analisis de Datos
+          </h5>
+          <img src ="assets/images/Skitlearlogo.png" alt="Skilldata-img">
+        </div>
+        <div class="Skills-Card">
+          <h5>
+            Microsoft Office Suite
+          </h5>
+          <img src ="assets/images/officelogo.png" alt="Skilloffice-img">
+        </div>
+      </section>
+      <section class="educacion">
+        <div class="educacion-card">
+        <h4>Educación.</h4>
+        <h5>Ingeniería En Control y Computación.</h5>
+        <h6>Titulo.</h6>
+        <p>Otorgado por: </p>
+        <a href="https://www.uan.edu.mx/es/ingenieria-en-control-y-computacion" target="_blank"><img src="assets/images/Logo_de_la_UAN.svg" alt="uan-logo"></a>
+        <p>Universidad Autónoma de Nayarit.</p>
+        <p>2018-2023.</p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-user">
+        <p>
+          Página diseñanada y codificada por:
+        </p>
+        <p class="user">
+          @Marstigi
+        </p>
+      </div>
+      <div class="footer-marca">
+        <p>
+        Proyecto: Irene
+        </p>
+        <img src="assets/images/marca.jpg" alt="Logo-marca">
+      </div>
+      <div class="footer-copy">
+        <p>&copy; 2024 | Brayan Jesús Carrillo Jiménez. </p>
+        <p> |Todos los derechos reservados.|</p>
+    </div>
     </footer>
-</body>
+  </body>
 </html>
