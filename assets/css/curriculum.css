@@ -9,13 +9,6 @@
 }
 
 .download-btn:hover {
-    
-    background-color: #ff6347; /* Cambia el color al pasar el ratón sobre el botón */
-}
 
-.uwu{
-    font-size: 18px;
-    color: #eee;
-    margin: 15px auto;
-    padding: 15px;
+    background-color: #ff6347; /* Cambia el color al pasar el ratón sobre el botón */
 }
