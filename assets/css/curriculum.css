@@ -1,7 +1,7 @@
 .download-btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #ff7f29; /* Color del botón */
+    background-color: #DC143C; /* Color del botón */
     color: #fff; /* Color del texto del botón */
     text-decoration: none;
     border-radius: 5px;
@@ -10,8 +10,8 @@
 
 .download-btn:hover {
 
-    background-color: #FF7F29; /* Naranja brillante para contraste */
-    color: #1a1a1a; /* Texto oscuro para contraste */
+    background-color: #e04564; /* Naranja brillante para contraste */
+    
     transform: scale(1.2);
     transition: transform 0.3s ease;
 }

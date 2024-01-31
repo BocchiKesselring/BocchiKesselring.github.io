@@ -9,7 +9,7 @@
 }
 
 html {
-    scrollbar-color: #4E3629 #000000; /* Marrón oscuro para la barra de desplazamiento */
+    scrollbar-color: #350a0e #000000; /* Marrón oscuro para la barra de desplazamiento */
 }
 
 h1, h2 {
@@ -17,7 +17,7 @@ h1, h2 {
     margin: 10px auto;
     font-size: 20px;
     padding: 15px;
-    color: #FF7F29; /* Naranja brillante */
+    color: #DC143C; /* Naranja brillante */
 }
 
 body {
@@ -43,7 +43,7 @@ header {
     display: flex;
     flex-direction: row;
     padding: 15px;
-    border-bottom: 2px solid #FF7F29; /* Naranja brillante para contraste */
+    border-bottom: 2px solid #DC143C; /* Naranja brillante para contraste */
     justify-content: space-between;
     align-items: center;
 }
@@ -54,7 +54,6 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: #FF7F29; /* Naranja brillante para contraste */
 }
 
 .presentation-container h1, .presentation-container h2 {
@@ -67,6 +66,7 @@ header {
     height: 105px;
     border-radius: 50%;
     margin: 0 auto;
+    border: 4px solid #ecf0f1;
 }
 
 .presentation-container h4, h1{
@@ -74,8 +74,12 @@ header {
   color: #DDD;
   
 }
-.nav-container {
-    text-align: center;
+
+nav {
+
+    padding: 15px;
+    border-top: 1px solid #DDD; /* Línea gris entre el nav y el presentation-container */
+    border-bottom: 1px solid #DDD
 }
 
 nav ul {
@@ -85,10 +89,10 @@ nav ul {
     display: flex;
     justify-content: space-around;
 }
-
 nav li {
     margin-right: 50px;
     transition: transform 0.3s ease;
+
 }
 
 nav a {
@@ -100,12 +104,12 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #FF7F29; /* Naranja brillante para contraste */
-    color: #1a1a1a; /* Texto oscuro para contraste */
+
+    background-color: #DC143C; /* Naranja brillante para contraste */
 }
 
 nav li:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
     transition: transform 0.3s ease;
 }
 
@@ -120,20 +124,25 @@ nav li:hover {
     }
 
     nav ul {
+        
         flex-direction: column;
         align-items: center;
     }
 
     nav li {
+        padding: 5px;
         margin-right: 0;
         margin-bottom: 10px;
         margin-right: 10px; /* Reduje el espacio entre las listas para pantallas más pequeñas */
 
     }
+
+    
 }
 main {
+
     padding: 20px;
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
     text-align: center;
 }
@@ -143,15 +152,26 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    border: 2px solid #FF7F29;
+    border: 2px solid #DC143C;
     border-radius: 5px;
     padding: 15px;
     margin: 20px auto;
+    
 }
 
+.sobre-mi-card{
+
+    color: #DDD;
+    background-color: #1a1a1a; /* Gris oscuro */
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 .Skills {
     color: #DDD;
-    border: 2px solid #FF7F29;
+    border: 2px solid #DC143C;
     border-radius: 8px;
     padding: 20px;
     height: 100%;
@@ -162,6 +182,7 @@ main {
 }
 
 .Skills-Card {
+
     color: #DDD;
     background-color: #1a1a1a; /* Gris oscuro */
     border: 1px solid #333;
@@ -172,7 +193,7 @@ main {
 }
 
 .Skills-Card h5 {
-    color: #FF7F29;
+    color: #DC143C;
 }
 
 .Skills-Card img {
@@ -188,7 +209,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  border: 2px solid #FF7F29;
+  border: 2px solid #DC143C;
   border-radius: 5px;
   padding: 15px;
   margin: 20px auto;
@@ -210,7 +231,7 @@ main {
 .educacion-card h4, 
 h6{
     font-size: 18px;
-    color: #FF7F29;
+    color: #DC143C;
 
 }
 
@@ -232,7 +253,7 @@ footer {
     flex-direction: column;
     align-items: center;
     background-color: #121212;
-    border-top: 2px solid #FF7F29;
+    border-top: 2px solid #DC143C;
     color: #DDD;
     bottom: 0;
     margin-top: 100vh;
@@ -250,6 +271,7 @@ footer img {
 .footer-user,
 .footer-marca,
 .footer-copy {
+
     width: 100%;
     margin: 0 auto;
 }
@@ -266,7 +288,7 @@ footer img {
 
 .footer-user {
     background-color: #1a1a1a; /* Gris oscuro */
-    border-bottom: 2px solid #FF7F29;
+    border-bottom: 2px solid #DC143C;
 }
 
 .footer-marca {
