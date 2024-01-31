@@ -18,9 +18,28 @@
 }
 
 .contact-p{
+
     color: #eee;
     margin: 20px auto;
     padding: 15px;
     font-size: 20px;
     
+}
+
+.contacto-card{
+    color: #DDD;
+    background-color: #1a1a1a; /* Gris oscuro */
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-container{
+    color: #DDD;
+    border: 2px solid #DC143C;
+    border-radius: 8px;
+    padding: 20px;
+    height: 100%;
 }
