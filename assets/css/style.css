@@ -283,8 +283,21 @@ footer img {
 }
 
 .user{
+
+    color: #DDD;
     font-style: italic;
     font-size: 18px;
+    transition: color 0.3s ease;
+    transition: color, font-size 0.3s ease;
+
+
+}
+
+.user:hover{
+
+    color: #DC143C;
+    transition: color, font-size 0.3s ease;
+    font-size: 22px;
 }
 
 .footer-user {
