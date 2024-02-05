@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+
+*{
+    font-family: "Poppins", sans-serif;
+    font-family: "Poppins", sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+
+    scrollbar-color: #350a0e #000000; /* Marrón oscuro para la barra de desplazamiento */
+
+}
+
+
+body {
+
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header{
+
+    color: #1a1a1a;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px;
+    display: flex;
+    flex-direction: row;
+    background-color: #EEE;
+    align-items: center;
+    margin-bottom: 30px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Ajusta el valor de sombra según tus preferencias */
+
+
+}
+
+
+.xd{
+
+    width: 100px;
+}
+
+.ini{
+
+    color: #DC143C;
+}
+
+.ul-nav {
+
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+}
+
+.li-nav {
+    
+    font-size: 15px;
+    margin: 0 15px;
+    transition: transform 0.3s ease;
+
+}
+
+.li-nav:hover{
+
+    transition: transform 0.3s ease;
+    color: #DC143C;
+    transform: scale(1.1);
+}
+
+p {
+    margin: 0;
+}
+
+main::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #f1f1f1;
+    opacity: 0.7;
+    background-image: radial-gradient(#080808 2px, transparent 2px), radial-gradient(#DC143C 2px, #f1f1f1 2px);
+    background-size: 90px 90px;
+    background-position: 0 0,45px 45px;
+}
+main {
+    position: relative;
+    flex: 1 0 auto;
+    /* Otros estilos para tu contenido principal */
+}
+
+section.general-info {
+
+    border-radius: 8px;
+    margin: 15px;
+    display: flex;
+    flex-direction: row;
+    background-color: #e9e9e9;
+}
+
+article.sobre-mi {
+
+    margin: 0 auto;
+    width: 95%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.general-info .sobre-mi .profile-photo{
+
+   border-radius: 8px;
+   width: 400px ;
+   height: 500px;
+
+}
+
+p {
+    
+    flex: 1;
+    line-height: 1.5;
+    padding-right: 20px;
+}
+
+
+.text-article{
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.text-article h2{
+
+    color: #DC143C;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.interses img{
+
+    padding: 10px;
+    height: 90px;
+    width: 90px;
+}
+
+.interses,
+.Skilss, 
+.Curriculum {
+
+    width: 260px;
+    padding: 20px;
+}
+
+.skill-ul{
+    
+    flex-direction: column;
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    padding: 0;
+
+}
+
+.skill-il{
+    padding: 5px;
+    margin: 2px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px; 
+}
+
+.Skilss .skill-ul .skill-il img {
+    padding: 5px;
+    margin-right: 6px;
+    height: 50px;
+    width: 50px; 
+}
+
+.text-presentation{
+    flex-direction: row;
+    display: flex;
+}
+
+.column {
+    width: 48%; /* Ajusta el ancho de las columnas según tus preferencias */
+}
+
+button {
+    background-color: #DC143C;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #da3e5d;
+}
+footer{
+
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2); /* Ajusta el valor de sombra según tus preferencias */
+
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-container{
+
+    padding: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    bottom: 0;
+    background-color: #EEE;
+}
+
+.social-media img{
+
+    margin: 0 auto;
+    padding: 5px;
+    width: 45px;
+    height: 45px;
+    transition: transform 0.3s ease;
+
+
+}
+
+.social-media img:hover{
+
+    transition: transform 0.3s ease;
+    transform: scale(1.3);
+}
+
+.copy{
+
+    font-size: 15px;
+    text-align: center;
+    color: #EEE;
+    background-color: #000000;
+}
+
+
+@media(max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .xd {
+        margin-bottom: 10px;
+    }
+
+    ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    li {
+        margin: 10px 0;
+    }
+
+    .info-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-media img {
+        margin-bottom: 10px;
+    }
+}
+
+
