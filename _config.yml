@@ -1,9 +1,0 @@
-title: Portafolio-Brayan
-description: Es el portafolio de Brayan
-baseurl: "" # Si tu sitio no está en la raíz de tu dominio
-theme: jekyll-theme-minimal # Cambia al tema que desees
-
-permalink: /:title/ # Configuración para eliminar extensiones de archivo en URLs
-exclude: ["Gemfile", "Gemfile.lock", "node_modules", "vendor", "_site", ".git"] # Carpetas y archivos excluidos de la generación
-
-# Configuraciones opcionales
