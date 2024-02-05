@@ -36,7 +36,10 @@ header {
     align-items: center;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
-
+a {
+  color: #000000;
+  text-decoration: none;
+}
 .header-content {
     width: 100%;
     display: flex;
@@ -235,7 +238,7 @@ body {
   }
   
   .curriculum button:hover {
-    background-color: #940f29;
+    background-color: #d63958;
     transform: scale(1.2);
     transition: transform 0.3s ease;
     
