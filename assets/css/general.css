@@ -134,7 +134,7 @@ body {
   .profile-img img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
   }
   
   /* ----- CONTENIDO DE INFORMACIÓN GENERAL ----- */
@@ -298,7 +298,13 @@ body {
   
   @media (max-width: 768px) {
     .sobre-mi {
+      text-align: center;
+      justify-content: center;
       flex-direction: column;
+    }
+
+    .sobre-mi .profile-img{
+      margin: 0 auto;
     }
   
     .general-info-content {
@@ -390,6 +396,7 @@ footer {
     .name h1 {
         font-size: 1.2em;
         margin-bottom: 10px;
+
     }
 
     nav {
