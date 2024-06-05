@@ -76,24 +76,15 @@ main {
     min-height: 100vh;
 }
 
+
 p,
 h2,
 h1{
     padding: 10px;
 }
 
-h2{
-    color: #DC143C;
-}
-
-
-body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
   main{
+
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, auto);
@@ -264,11 +255,16 @@ body {
   }
   
   .educacion h3 {
-    color: #DC143C;
+    color: #000000;
     font-size: 20px;
     margin-bottom: 5px;
   }
   
+  .educacion h4{
+    color: #DC143C;
+    font-size: 15px;
+  }
+
   .educacion p {
     font-size: 16px;
     line-height: 1.5;
@@ -328,6 +324,11 @@ footer {
 .content-info h2 {
     color: #000000;
     font-size: 1.2em;
+}
+
+.social-media div p{
+  text-align: center;
+  align-items: center;
 }
 
 .social-media img {
