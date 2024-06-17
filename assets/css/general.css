@@ -65,8 +65,13 @@ nav {
 
 .li-nav:hover {
     transition: transform 0.3s ease;
-    color: #DC143C;
+    color: #df002d;
     transform: scale(1.1);
+}
+
+.void{
+
+  color: transparent;
 }
 /* Estilos del contenido principal */
 main {
@@ -74,8 +79,9 @@ main {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    flex-direction: column;
+    gap: 20px; /* Espacio entre secciones */
 }
-
 
 p,
 h2,
@@ -84,12 +90,6 @@ h1{
     padding: 10px;
 }
 
-main {
-
-  display: flex;
-  flex-direction: column;
-  gap: 20px; /* Espacio entre secciones */
-}
   /* ----- SECCIÓN GENERAL INFO ----- */
   
   .personal-info-section{
@@ -125,11 +125,9 @@ main {
   }
 
 
-
   /* ----- ARTÍCULO SOBRE MÍ ----- */
   
   .sobre-mi {
-
 
     display: flex;
     flex-direction: column;
@@ -156,6 +154,25 @@ main {
     width: 50px;
     height: 50px;
     transition: transf
+  }
+
+  .interests-list-img{
+    gap: 30px;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+  }
+
+  .interests-list-img img{
+      margin: 0 10px;
+      width: 80px;
+      height: 80px;
+
+  }
+
+  .skill-list{
+
+    list-style: none;
   }
   
 
@@ -186,7 +203,7 @@ main {
   }
   
   .educacion h4{
-    color: #DC143C;
+    color: #df002d;
     font-size: 15px;
   }
 
@@ -278,7 +295,10 @@ footer {
     padding: 10px;
 }
 
+/* ---------------------------------- Responsive --------------------------- */
+
 @media (max-width: 768px) {
+
     footer {
 
         bottom: 0;
@@ -295,6 +315,7 @@ footer {
     }
 
     .copy {
+
         text-align: center;
     }
 
@@ -304,6 +325,7 @@ footer {
 }
 
 @media (max-width: 768px) {
+
     header {
         flex-direction: column;
         align-items: center;
@@ -327,4 +349,14 @@ footer {
     .li-nav {
         margin: 10px 0;
     }
+}
+
+@media (max-width: 768px){
+
+  .interests-list-img{
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+  }
 }
