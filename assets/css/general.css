@@ -52,21 +52,35 @@ nav {
     display: flex;
 }
 
+nav ul li p a {
+  color: #000000;
+  text-decoration: none;
+}
+
+nav ul li p a:hover {
+  color: #df002d;
+  text-decoration: none;
+}
+
+
 .ul-nav {
     list-style: none;
     display: flex;
+
 }
 
 .li-nav {
     font-size: 1em;
     margin: 0 15px;
     transition: transform 0.3s ease;
+
 }
 
 .li-nav:hover {
     transition: transform 0.3s ease;
     color: #df002d;
     transform: scale(1.1);
+
 }
 
 .void{
@@ -359,4 +373,26 @@ footer {
     flex-direction: column;
     list-style: none;
   }
+}
+
+.boton-cv{
+
+  background-color: #df002d; /* Color de fondo */
+  border: none; /* Sin borde */
+  color: white; /* Color del texto */
+  padding: 15px 32px; /* Relleno interior */
+  text-align: center; /* Alineación del texto */
+  text-decoration: none; /* Sin subrayado */
+  display: inline-block; /* Para que se comporte como un bloque en línea */
+  font-size: 16px; /* Tamaño de la fuente */
+  margin: 4px 2px; /* Margen exterior */
+  cursor: pointer; /* Cambia el cursor a una mano */
+  border-radius: 12px; /* Bordes redondeados */
+  transition-duration: 0.4s; /* Transición suave */
+}
+
+.boton-cv:hover{
+  background-color: white; /* Cambia el color de fondo a blanco */
+  color: #df002d; /* Cambia el color del texto */
+  border: 2px solid #df002d; /* Añade un borde */
 }
