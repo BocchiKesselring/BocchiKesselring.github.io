@@ -381,16 +381,17 @@ footer {
   color: white; /* Color del texto */
   padding: 15px 32px; /* Relleno interior */
   text-align: center; /* Alineación del texto */
-  text-decoration: none; /* Sin subrayado */
   display: inline-block; /* Para que se comporte como un bloque en línea */
   font-size: 16px; /* Tamaño de la fuente */
   margin: 4px 2px; /* Margen exterior */
   border-radius: 12px; /* Bordes redondeados */
   transition: transform 0.3s ease;
+  cursor: pointer;
 
 }
 
 .boton-cv:hover{
+
   transition: transform 0.3s ease;
 
   transform: scale(1.2);
