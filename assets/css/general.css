@@ -106,14 +106,16 @@ h1{
 
   /* ----- SECCIÓN GENERAL INFO ----- */
   
-  .personal-info-section{
-
-    background-color: #EEE;
+  .section-personal-info{
+    height: 100vh;
     padding: 20px;
     margin-top: 40px;
     margin-bottom: 40px;
-    width: 70%;
-    border-radius: 15px;
+    width: 100%;
+    background: url("wallpaper-info.png");
+    background-size: cover;
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen */
     box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2), 0px 2px 5px rgba(0, 0, 0, 0.2);
 
   }
@@ -133,8 +135,7 @@ h1{
     padding: 20px;
     margin-top: 40px;
     margin-bottom: 40px;
-    border-radius: 15px;
-    width: 70%;
+    width: 100%;
     box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2), 0px 2px 5px rgba(0, 0, 0, 0.2);
   }
 
@@ -193,12 +194,11 @@ h1{
   /* ----- STYLE EDUCACIÓN ----- */
   
   .section-education {
-    width: 70%;
+    width: 100%;
     background-color: #EEE;
     padding: 20px;
     margin-top: 40px;
     margin-bottom: 40px;
-    border-radius: 15px;
     box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2), 0px 2px 5px rgba(0, 0, 0, 0.2);
   }
   .educacion {
