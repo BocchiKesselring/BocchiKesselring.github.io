@@ -17,7 +17,8 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #000000;
+    background-image: url("../img/Background.svg");
+    background-size: cover;
     margin: 0;
     padding: 0;
 }
@@ -260,9 +261,11 @@ footer {
     width: 100%;
     display: flex;
     flex-direction: column;
+    color: #fff;
 }
 
 .info-container {
+  
     box-sizing: border-box;
     width: 100%;
     padding: 35px;
@@ -270,11 +273,11 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     bottom: 0;
-    background-color: #EEE;
+    background-color: #ff1616;
 }
 
 .content-info h2 {
-    color: #000000;
+    color: #ffffff;
     font-size: 1.2em;
 }
 
@@ -301,7 +304,7 @@ footer {
     font-size: 15px;
     text-align: center;
     color: #EEE;
-    background-color: #000000;
+    background-color: #202020;
     padding: 10px;
 }
 
