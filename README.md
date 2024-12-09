@@ -1,3 +1,3 @@
-#¡Hola! Soy el ingeiero en control y computación Brayan Jesús Carrillo Jiménez. 
+# ¡Hola! Soy el ingeiero en control y computación Brayan Jesús Carrillo Jiménez. 
 
 ##
